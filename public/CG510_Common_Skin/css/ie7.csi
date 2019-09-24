@@ -1,0 +1,155 @@
+/*
+special rules for a special browser: ie7
+*/
+
+/*
+need fixed width on popup menus to prevent them from expanding to full page width
+*/
+.caf-popup-menu {
+	width: 200px;
+}
+.nav-menu {
+    width: @skin sizes/nav-link-width;;
+}
+
+/* contract huge horizontal space ie has hardcoded for hr */
+.caf-popup-menu .caf-popup-menu-item-separator {
+    height: 1px;
+    top: -2em;
+    margin-bottom: -1.5em;
+}
+
+/*
+in quirks-mode spin-buttons are shifted 1em down for ff and 1em up for ie
+*/
+.caf-timepicker .caf-spinbuttons {
+    top: 0.5em;
+}
+
+/*
+make left edge of checkbox line up with left edge of other inputs in property-line
+*/
+.caf-property-line input.caf-checkbox, .caf-property-line input.caf-radio {
+    margin-@skin align/start;: -4px;
+}
+
+/* tweak tab-collapse icon positioning */
+.noodle-tab-collapse img {
+    position: relative;
+    top: 8px;
+}
+
+/* no content or after for ies, hack for dirty ws */
+.caf-tabs-top li.portlet-section-selected .caf-content div.noodle-dirty a.noodle-name  {
+    background: url(@skin images/required.gif;) top @skin align/start; no-repeat;
+    padding-@skin align/start;: 7px;
+}
+
+/* tweak portlet-finder icon positioning */
+.noodle-tab-finder-popup-menu .caf-popup-menu-item .caf-icons,
+.noodle-tab-finder-popup-menu .caf-popup-menu-item-selected .caf-icons,
+.noodle-portlet-finder-popup-menu .caf-popup-menu-item .caf-icons,
+.noodle-portlet-finder-popup-menu .caf-popup-menu-item-selected .caf-icons {
+    top: 2px;
+}
+
+/* ie won't flip item positioning in rtl mode without this */
+.caf-list-horizontal-separated li {
+    position: relative;
+    zoom: 1;
+}
+
+/* don't let group in rtl pp dialog slide over */
+.caf-box-group {
+    zoom: 1;
+}
+
+/* ie rtl pp dialog displays first selected person way too far right, if his/her name has rtl chars */
+.caf-swap-picker, ol.caf-listbox, .caf-listbox li {
+    position: relative;
+    zoom: 1;
+}
+
+/* makes ie obey 0 margins and padding for some reason */
+.caf-listbox li {
+	border: 1px solid tranparent;
+}
+
+/* avoid horizontal scrollbar when vertical scrollbar is present */
+.portal-page table,
+div.portlet-column {
+    width: 97%;
+}
+.portlet-column table {
+    width: 100%;
+}
+
+/* don't need to offset legend padding in ie */
+legend {
+    padding: 0;
+}
+
+/* fixes cell-truncation and row-containment for ie7 + rtl + drag-to-resize
+as well as truncated-column + drag-to-resize (both ltr and rtl) */
+.caf-truncate-table,
+.caf-truncate-padding,
+.caf-drag-to-resize-columns-portlet-body,
+.caf-drag-to-resize-columns-row {
+    position: relative;
+}
+.caf-drag-to-resize-columns {
+    zoom: 1;
+}
+
+/* ie aligns icons a little lower than ff */
+.titlebar-icons {
+    top: 0.2em;
+}
+
+/*
+ie7 sometimes fails to render portlets contained in other portlets (because of the fancy relative positioning)
+*/
+.portlet-container .portlet-container .portlet-border,
+.portlet-container .portlet-container .titlebar,
+.portlet-container .portlet-container .titlebar .caf-content {
+    position: static;
+    zoom: normal;
+}
+.portlet-container .portlet-container .titlebar .titlebar-left,
+.portlet-container .portlet-container .titlebar .titlebar-right {
+    display: none;
+}
+
+.fake .portlet-border,
+.portlet-container .fake .portlet-border {
+    position: relative;
+}
+
+.fake .titlebar .titlebar-left,
+.portlet-container .fake .titlebar .titlebar-left {
+    display: inline;
+    height: 24px;
+}
+
+.fake .titlebar .titlebar-right,
+.portlet-container .fake .titlebar .titlebar-right {
+    display: inline;
+    height: 24px;    
+}
+
+.fake .titlebar .caf-content,
+.portlet-container .fake .titlebar .caf-content {
+    margin-right: 0px;
+    margin-left: 3px;
+}
+
+/* reset zoom for fake portlet in portlet */
+.portlet-container .fake .titlebar .caf-content {
+    zoom: 1;
+}
+
+/* ie shifts header label wrong way -- on top of sortable arrow image */
+.portlet-section-header a.caf-sortable {
+    position: relative;
+    zoom: 1;
+}

@@ -1,0 +1,7 @@
+.caf-timepicker .caf-spinbuttons button {
+    width: 2em;
+}
+
+.caf-timepicker .caf-spinbuttons2 {
+	top: 0.5em;
+}

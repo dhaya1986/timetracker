@@ -1,0 +1,172 @@
+/* ============================================== styling for custom-listView grid ============================================== */
+
+.ag-menu {
+    background: #ededed;
+    border: 1px solid;
+    padding: 0.5em;
+}
+
+.ag-root {
+    border: none !important;
+    background: #fff;
+    border-radius: 5px;
+    border: 1px solid #ccc !important;
+}
+
+.ag-header {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    background: white;
+    height: 45px !important;
+}
+
+.ag-header-cell {
+    text-align: center;
+    border: none !important;
+    /* padding: 0.5em 0px 0.5em 1em; */
+    font-weight: bold;
+}
+
+
+/*
+add the following attribute to .ag-header-cell for removing right most border, but issue when re-arranging columns
+ :not(:last-child)
+*/
+
+.ag-header-cell-resize {
+    border-right: 1px double black !important;
+}
+
+
+/* .ag-header-viewport>.ag-header-container>.ag-header-row>.ag-header-cell>.ag-cell-label-container {
+    border-right: 1px double black !important;
+}
+
+.ag-pinned-left-header>.ag-header-row>.ag-header-cell {
+    border-right: 1px double black !important;
+}
+
+.ag-pinned-right-header>.ag-header-row>.ag-header-cell {
+    border-right: 1px double black !important;
+} */
+
+.ag-row {
+    border-top: 1px solid rgba(204, 204, 204, 0.31);
+    border-bottom: 1px solid rgba(204, 204, 204, 0.31);
+}
+
+.ag-cell {
+    text-align: center;
+    padding: 0.5em 0px 0.5em 0em;
+}
+
+.ag-cell-focus {
+    outline: none;
+}
+
+.ag-cell-last-left-pinned {
+    border-right: 1px double #ccc !important;
+}
+
+.ag-cell-first-right-pinned {
+    border-left: 1px double #ccc !important;
+}
+
+.ag-body-viewport {
+    overflow-y: hidden !important;
+    background: white;
+}
+
+
+/* ============================================== Custom-listView Edit dropdown styling ============================================== */
+
+.custom-listView-container {
+    height: 100%;
+    width: 100%;
+    min-height: 10rem;
+}
+
+.custom-grid-container {
+    height: 100%;
+    width: 100%;
+}
+
+.custom-grid {
+    height: 100%;
+    width: 100%;
+    font-family: 'Segoe UI';
+}
+
+.custom-listView-dropdown>button {
+    border: none;
+    background: none;
+    font-size: 1.1em;
+}
+
+.custom-listView-dropdown-button {
+    cursor: pointer;
+    font-family: 'Segoe UI'
+}
+
+.custom-listView-dropdown-button:focus {
+    outline: none;
+}
+
+.custom-listView-dropdown-menu-hidden {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 2px;
+    vertical-align: middle;
+    border-top: 4px solid;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+}
+
+.custom-listView-span-hidden {
+    padding: 1rem;
+    height: 27rem;
+    width: 25rem;
+}
+
+#customDDList {
+    list-style: none;
+}
+
+.custom-listView-dropdown-menu-checkbox-label {
+    cursor: pointer;
+}
+
+.custom-listView-dropdown-menu-resetBtn {
+    width: 50%;
+    margin: auto;
+}
+
+.custom-listView-dropdown-menu-resetBtn>button {
+    cursor: pointer;
+}
+
+
+/* .edit-column-row {
+    display: none;
+} */
+
+
+/* ============================================== Custom Filter styling ============================================== */
+
+
+/* .custom-filter-container {} */
+
+.custom-filter-label {
+    font-weight: bold;
+}
+
+.custom-filter-searchBox {
+    margin: 4px 0px 4px 0px;
+}
+
+.custom-filter-searchBtn {
+    margin-top: 20px;
+    width: 50%;
+    margin: auto;
+}

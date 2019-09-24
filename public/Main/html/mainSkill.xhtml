@@ -1,0 +1,54 @@
+<!-- 
+ * ========================================================================
+ * filter-page  Added by Reeth with ref to Modularize view of Filter Section  07-03-2017   
+ * tile-page    Added by Reeth with ref to Modularize view of Tile Section  07-03-2017 
+ * ========================================================================
+ * -->
+
+<!-- 
+ * ========================================================================
+ * Below page modified for collapse functionality of breadcrumb-section and filter-page.   
+ * Modified by Shashank Honrao on 24-Nov-2017 
+ * ========================================================================
+ * -->
+
+<div class="app-font">
+	<div data-ng-controller="sessionController">
+		<header-page class="navbar navbar-fixed-top" style="z-index: 1000;"></header-page>
+		<div class="navbar navbar-fixed-top fix-position">
+			<div class="collapse in" id="demo">
+				<breadcrumb-section></breadcrumb-section>
+			</div>
+			<div style="text-align: center;">
+				<button class="toggle-button" data-toggle="collapse" data-target="#demo" data-ng-show="toggleView"
+					aria-hidden="false" data-ng-click="toggleView=false">
+					<img class="arrowIcon" src="../image/arrow-down.png"></img>
+				</button>
+				<button class="toggle-button" data-toggle="collapse" data-target="#demo" data-ng-hide="toggleView"
+					aria-hidden="true" data-ng-click="toggleView=true">
+					<img class="arrowIcon" src="../image/arrow-up.png"></img>
+				</button>
+			</div>
+		</div>
+		<div data-ui-view=""
+			data-ng-class="(toggleView == true) ? 'removeMarginTop removeMarginTopNorm':'addMarginTopNorm'"
+			style="z-index: 500;"></div>
+		<script type="text/ng-template" id="warning-dialog.xhtml">
+			<div style="border: 2px solid #01628f !important;">
+				<div style="height: 40px; background: #01628f !important; color: white;">
+					<h5 class="modal-title" style="padding: 1%;font-size: 20px;">Session Expiry</h5>
+				</div>
+				<div style="min-height: 50px; padding-top: 10px;">
+					<div style="margin: 1% 0% 0% 2%;">
+						<p style="font-size: 14px;">Your session is about to expire due to inactivity.</p>
+					</div>
+					
+					<div idle-countdown="countdown" ng-init="countdown=1" class="modal-body">
+						<p>Time Left : {{countdown}} secs</p>
+  					</div>
+				
+				</div>
+			</div>
+  		</script>
+	</div>
+</div>

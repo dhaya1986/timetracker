@@ -1,0 +1,46 @@
+<div>
+	<div class="panel-body" style="padding-bottom: 0px">
+		<div class="row">
+			<div class="col-sm-8 col-md-8 col-lg-8 My-Active-Projects">
+				<span class="jj_font_21"></span>
+			</div>
+			<div class="col-sm-4 col-md-4 col-lg-4 My-Active-Projects">
+				<div class="dropdown jj_font_13" style="float: right; top: 5px">
+					<span style="width: 130px" class="col-sm-4 col-md-4 col-lg-4">
+						<ui-select id="yearId" name="allProjects" theme="bootstrap" data-ng-model="yearSelected"
+							on-select="onYearSelect(yearSelected)" data-ng-disabled="false">
+							<ui-select-match placeholder="Select Year">
+								<span class="font-size">{{$select.selected}}</span>
+							</ui-select-match>
+							<ui-select-choices repeat="year in yearDD | filter: $select.search">
+								<span data-ng-bind="year"></span>
+							</ui-select-choices>
+						</ui-select>
+					</span>
+					<span data-toggle="dropdown" style="cursor: pointer;"> Edit Column
+						<span class="caret"></span>
+					</span>
+					<div class="dropdown-menu dropdown-menu-transition edit-column-align dropdown-menu-right editColumnAllignment"
+						data-ng-click="$event.stopPropagation()">
+						<span class="edit-column-label2"> Select Columns To Show </span>
+						<ul style="list-style: none;" id="filterText">
+							<li data-ng-repeat="colHeads in allTitles">
+								<input type="checkbox" value="{{colHeads.field}}" id="cks" data-ng-model="selectedAll"
+									data-ng-click="hideColumn(selectedAll)">{{colHeads.headerName}}</input>
+							</li>
+						</ul>
+						<span class="ml-25">
+							<button class="btn ButtonPrimary" data-ng-click="resetFilter()">Reset</button>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="panel-default">
+		<div class="panel-body">
+			<div id="allProjectsGrid" data-ag-grid="allProjectsGridOptions"
+				style="width: 100%; height: 400px; padding-bottom: 0px" class="ag-fresh list-align"></div>
+		</div>
+	</div>
+</div>

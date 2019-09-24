@@ -1,0 +1,201 @@
+/*
+ * ============================================================================
+ * Added by Reeth with ref to Modularize view of Breadcrumb Section  29-03-1017   
+ * ============================================================================
+ */
+@CHARSET "ISO-8859-1";
+
+/* Hex color code for sunshineyellow modified to blue shade by Shashank Honrao on 15-Nov-2017 */
+:root { 
+	--white: #ffffff; 
+	--charcoal: #4d4e4e; 
+	--lightgrey: #fafafa; 
+	--navyBlue: #00628f;
+	--sunshineyellow: #01628f; 
+	--red:#d92e2c;
+	--sunshineyellow :#01628f;
+	--bordergray: #bbbbbb;
+	--bgGray : #ededed;
+}
+
+.breadcumBorder {
+	background-color: var(--bgGray);
+    border-bottom: 1px solid var(--bgGray);
+}
+
+/* Padding-left modified from 10px to 15px to match with other apps by Shashank Honrao on 27-Nov-2017 */
+.uibreadcrumbs {
+	margin: 0px;
+	list-style: none;
+	display: inline-flex;
+	padding-left: 15px;
+}
+
+.breadcrumb-links {
+	display: inline-flex; 
+	padding: 0px;
+	font-size: 14px;
+}
+
+.arrow {
+	height: 45px;
+	width: 10px;
+}
+
+/* mr-t-1 class added by Shashank Honrao on 22-Nov-2017  */
+.mr-t-1 {
+	margin-top: 1%;
+}
+
+.breadcrumb-link-margin {
+	margin-top: 1%;	
+}
+
+.liststyle {
+	min-height: 100%;
+	display: inline-flex;
+	align-items: center;
+	color: grey;
+	cursor: default;
+	padding-left: 10px;
+}
+
+.cursor {
+	cursor: pointer;
+}
+
+.add-profile-dropdown-menu {
+	width:250px;
+	padding:10px;
+}
+
+.add-profile-dropdown-menu {
+	width:250px;
+	padding:10px;
+}
+
+.newButton{
+	background-color: transparent;
+	border: none;
+}
+
+.popover-footer{
+   	padding: 6px 14px;
+   	background-color: #f7f7f7;
+    border-top: 1px solid #ebebeb;
+    text-align: right;
+}
+
+.modalButton-Primary{
+	background-color: var(--sunshineyellow);
+    color: white;
+    border: 1px solid var(--sunshineyellow);
+}
+
+.modalButton-Secondary{
+	background-color: var(--white);
+    color: black;
+    border: 1px solid grey;
+}
+
+.ast-color{
+	color: var(--red);
+	font-size: 8px;
+	top: -2px;
+}
+
+.btn.disabled, .btn[disabled], fieldset[disabled] .btn {
+    pointer-events: auto !important;
+    cursor: not-allowed;
+    filter: alpha(opacity=65);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    opacity: .65;
+}
+
+/* Added by TTT */
+.BD-Button {
+	width: 147px;
+	height: 40px;
+	border-radius: 5px;
+	border: solid 1px var(--Grey);
+  }
+  
+  .BD-ButtonActive {
+	width: 147px;
+	height: 40px;
+	border-radius: 5px;
+	background-color: #fff;
+	border: solid 1px var(--Grey);
+  }
+
+.BD-Button.breadcrumb-button:hover{
+	background: #fff;
+}
+
+@media (min-width:768px){
+	.pos-dropdown{
+		left:-55px;
+	}
+	
+	.linkSection{
+		margin-top: 1.5%;
+    	font-size: 14px;
+	    float: right;
+	}
+
+	.buttonSection {
+		margin-top: 1.5%;
+		font-size: 14px;
+	    float: right;
+	}
+
+	.breadcrumb-link-margin {
+		margin-top: 1.8%;	
+	}
+
+} 
+ @media (min-width:992px){
+	.pos-dropdown{
+		left:-30px;
+	}
+	
+	.linkSection{
+		margin-top: 1.5%;
+	    font-size: 14px;
+	    float: right;
+	}
+	
+	.buttonSection {
+		margin-top: 1.5%;
+		font-size: 14px;
+	    float: right;
+	}
+
+	.breadcrumb-link-margin {
+		margin-top: 1.5%;	
+	}
+}
+
+@media (min-width:1200px){
+	.pos-dropdown{
+		left:-20px;
+	}
+
+	.linkSection{
+		margin-top: 1%;
+	    font-size: 14px;
+	    float: right;
+	}
+
+	.buttonSection {
+		margin-top: 1%;
+		font-size: 14px;
+	    float: right;
+	}
+	
+	.breadcrumb-link-margin {
+		margin-top: 1%;	
+	}
+		
+} 

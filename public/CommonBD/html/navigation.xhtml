@@ -1,0 +1,52 @@
+<ul class="uibreadcrumbs">
+	<li data-ng-repeat="crumb in breadcrumbs" data-ng-class="{ active: $last }">
+		<!-- <span
+			data-ng-if="crumb.displayName == 'Employee Details'" class="cursor">
+			<img src="/CommonBD/image/home.png" data-ui-sref="main.tileview"
+				data-ui-sref-opts="{location:false,reload: false}" style="padding-top: 8px;"></img>
+		</span> <img class="arrow" src="/CommonBD/image/rightArrow.png"
+			data-ng-if="crumb.displayName == 'Employee Details'" style="padding-top: 10px;"></img> <span
+			class="liststyle" data-ng-show="crumb.displayName == 'Employee Details'"
+			style="top: 5px; position: relative; font-size: 13px;">{{
+			crumb.displayName }}</span><span data-ng-if="crumb.displayName == 'Skills Search Page'"
+			class="cursor">
+			<img src="/CommonBD/image/home.png" data-ui-sref="main.tileview"
+				data-ui-sref-opts="{location:false,reload: false}" style="padding-top: 8px;"></img>
+		</span> <img class="arrow" src="/CommonBD/image/rightArrow.png"
+			data-ng-if="crumb.displayName == 'Skills Search Page'" style="padding-top: 10px;"></img> <span
+			class="liststyle" data-ng-show="crumb.displayName == 'Skills Search Page'"
+			style="top: 5px; position: relative; font-size: 13px;">{{
+			crumb.displayName }}</span> -->
+		<!--Skills Serch page end  -->
+
+		<!-- Time Tacker Page -->
+		<span data-ng-if="crumb.displayName == 'Track Time' &amp;&amp; $root.showTTHomeIcon" class="cursor">
+			<img src="/CommonBD/image/home.png" data-ng-click="changeMode(btn2)" style="padding-top: 8px;"></img>
+		</span> <img class="arrow" src="/CommonBD/image/rightArrow.png"
+			data-ng-if="crumb.displayName == 'Track Time' &amp;&amp; $root.showTTHomeIcon"
+			style="padding-top: 10px;"></img> <span class="liststyle"
+			data-ng-show="crumb.displayName == 'Track Time' &amp;&amp; $root.showTTHomeIcon"
+			style="top: 5px; position: relative; font-size: 13px;">{{
+			crumb.displayName }}</span>
+		<!--Time Tacker page end  -->
+
+		<span
+			data-ng-show="($last &amp;&amp; crumb.displayName == 'main') ||( crumb.displayName == 'Tile View' || crumb.displayName == 'List View' || crumb.displayName == 'Time Tracker Main') &amp;&amp; !$root.showTTHomeIcon">
+			<img src="/CommonBD/image/home.png" data-ng-if="!showTimeTrackingTab" style="padding-top: 15px;"></img>
+			<button class="BD-Button breadcrumb-button font-16" data-ng-if="showTimeTrackingTab"
+				style="margin-top : 6px" data-ng-class="{'BD-ButtonActive':modeSelected == btn1}"
+				data-ng-click="changeMode(btn1)" data-ui-sref="main.tileview"
+				data-ui-sref-opts="{location:false,reload: false}">
+				<div style="text-align: left; padding-left: 10%;">Profiles</div>
+			</button>
+			<button class="BD-Button btn breadcrumb-button font-16" data-ng-if="showTimeTrackingTab"
+				style="margin-top : -4px" data-ng-class="{'BD-ButtonActive':modeSelected == btn2}"
+				data-ng-click="changeMode(btn2)">
+				<div style="text-align: left; padding-left: 10%;">Time Tracking</div>
+			</button>
+			<button class="BD-Button btn breadcrumb-button font-16" data-ng-if="showAdminTab" style="margin-top : -4px"
+				data-ng-class="{'BD-ButtonActive':modeSelected == btn3}" data-ng-click="changeMode(btn3)">
+				<div style="text-align: left; padding-left: 10%;">Admin View</div>
+			</button>
+		</span> </li>
+</ul>

@@ -1,0 +1,1353 @@
+/*
+ * ========================================================================
+ * Added by Reeth with ref to Modularize view of Filter Section  27-02-1017   
+ * ========================================================================
+ */
+@CHARSET "ISO-8859-1";
+
+/* =====================================768=============================== */
+
+.radio,
+.checkbox {
+	display: block;
+	min-height: 20px;
+	padding-left: 20px;
+	margin-top: 0px !important;
+	margin-bottom: 0px !important;
+}
+
+.filter-mode-width {
+	width: inherit;
+}
+
+.filter-view-width {
+	width: inherit;
+}
+
+.filter-section-width {
+	width: inherit;
+}
+
+.filter-option-width {
+	width: inherit;
+}
+
+.filter-logo {
+	position: relative;
+	left: 37%;
+	font-size: 25px;
+	cursor: pointer;
+}
+
+.filter-links-images {
+	width: 80px;
+	margin-top: -15px;
+	border-radius: 9px;
+	cursor: pointer;
+}
+
+@media only screen and (min-device-width: 768px) {
+
+	.col-sm-1 {
+		width: 10%;
+	}
+
+	.col-sm-2 {
+		width: 16.66%;
+	}
+
+	.col-sm-3 {
+		width: 25%;
+	}
+
+	.col-sm-4 {
+		width: 33.33%;
+	}
+
+	.col-sm-5 {
+		width: 41.66%;
+	}
+
+	.col-sm-6 {
+		width: 50%;
+	}
+
+	.col-sm-7 {
+		width: 58.33%;
+	}
+
+	.col-sm-8 {
+		width: 66.66%;
+	}
+
+	.col-sm-9 {
+		width: 75%;
+	}
+
+	.col-sm-10 {
+		width: 83.33%;
+	}
+
+	.col-sm-11 {
+		width: 91.66%;
+	}
+
+	.col-sm-12 {
+		width: 100%;
+	}
+
+	/* jj-secondary-button class added by Shashank Honrao on 28-Nov-2017  */
+	.jj-secondary-button {
+		background-color: #fff;
+		color: #4D4E4E;
+		border: 1px solid #B3B3B3;
+		border-radius: 5px;
+		padding: 6px 15px 8px;
+		outline: none;
+	}
+
+	.jj-secondary-button:hover {
+		background-color: #fff;
+		color: #4D4E4E;
+		border: 1px solid #B3B3B3;
+		border-radius: 5px;
+		padding: 6px 15px 8px;
+		outline: none;
+	}
+
+	.company-icon {
+		background-image: url("../images/gfo.png");
+		width: 40px;
+		height: 40px;
+		background-repeat: no-repeat;
+	}
+
+	.company-icon:active {
+		background-image: url("../images/gfo_hover.png");
+		width: 40px;
+		height: 40px;
+		background-repeat: no-repeat;
+	}
+
+	.company-icon:hover {
+		background-image: url("../images/gfo_hover.png");
+		width: 40px;
+		height: 40px;
+		background-repeat: no-repeat;
+	}
+
+	.department-icon {
+		background-image: url("../images/department-md.png");
+		width: 40px;
+		height: 40px;
+		background-repeat: no-repeat;
+	}
+
+	.department-icon:active {
+		background-image: url("../images/bluedepartment-md.png");
+		width: 40px;
+		height: 40px;
+		background-repeat: no-repeat;
+	}
+
+	.department-icon:hover {
+		background-image: url("../images/bluedepartment-md.png");
+		width: 40px;
+		height: 40px;
+		background-repeat: no-repeat;
+	}
+
+	.region-icon {
+		background-image:
+			url("../images/region-md.png");
+		width: 40px;
+		height: 40px;
+		background-repeat: no-repeat;
+	}
+
+	.region-icon:active {
+		background-image: url("../images/blueselling-region.png");
+		width: 40px;
+		height: 40px;
+		background-repeat: no-repeat;
+	}
+
+	.region-icon:hover {
+		background-image: url("../images/blueselling-region.png");
+		width: 40px;
+		height: 40px;
+		background-repeat: no-repeat;
+	}
+
+	/* Height of Filters-part-1 increased by Shashank Honrao on 16-Nov-2017 */
+	.Filters-part-1 {
+		height: 135px;
+		background-color: var(--white);
+		border: 1px solid #aaa;
+	}
+
+	.Mode {
+		width: 100%;
+		font-family: AkzidenzGrotesk !important;
+		text-align: center;
+		margin-bottom: 5px;
+		margin-top: 10px;
+		font-size: 13px !important;
+		font-weight: 700;
+		text-decoration: none;
+		color: black;
+	}
+
+	.View {
+		width: 28px;
+		height: 27px;
+		font-family: AkzidenzGrotesk !important;
+		font-size: 13px;
+		font-weight: normal;
+		font-style: normal;
+		font-stretch: normal;
+		line-height: normal;
+		letter-spacing: normal;
+		color: var(--charcoal);
+	}
+
+	.Filters {
+		width: 100%;
+		font-family: AkzidenzGrotesk !important;
+		font-size: 13px !important;
+		font-weight: 700;
+		margin-top: 12px;
+		margin-bottom: 10px;
+		color: black;
+	}
+
+	.Mode-Select {
+		background-color: var(--sunshineyellow) !important;
+		color: var(--white) !important;
+	}
+
+	button:hover {}
+
+	/* border_mv class added by Shashank Honrao on 16-Nov-2017. */
+	.border_mv {
+		border-radius: 5px;
+		border: 1px solid #aaa;
+	}
+
+	/* Border removed from Mode-Normal & View-Normal by Shashank Honrao on 16-Nov-2017. 
+	 * As per recommendations to match to all other applications. 
+	 */
+	.Mode-Normal {
+		width: 35px !important;
+		height: 23px;
+		background-color: var(--white);
+		color: var(--charcoal);
+		font-family: AkzidenzGrotesk !important;
+		font-size: 13px;
+		font-weight: normal;
+		font-style: normal;
+		font-stretch: normal;
+		line-height: normal;
+		letter-spacing: normal;
+		padding: 0px 10px;
+		text-align: left;
+		border: 0;
+	}
+
+	.View-Normal {
+		width: 80px !important;
+		height: 25px;
+		border-radius: 5px;
+		background-color: var(--white);
+		color: var(--charcoal);
+		font-family: AkzidenzGrotesk !important;
+		font-size: 13px;
+		font-weight: normal;
+		font-style: normal;
+		font-stretch: normal;
+		line-height: normal;
+		letter-spacing: normal;
+		padding: 0px 10px;
+		text-align: left;
+		border: 0;
+	}
+
+	.Mode-Normal:active {
+		background-color: #ededed;
+	}
+
+	.View-Normal:active {
+		background-color: #ededed;
+	}
+
+	.View-Select {
+		color: var(--white) !important;
+		background-color: var(--sunshineyellow);
+	}
+
+	.container-fluid-filter {
+		padding-right: 0px;
+		padding-left: 0px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	.row-filter {
+		margin-right: 0px;
+		margin-left: 0px;
+	}
+
+	/* Capitalize attribute added by Shashank Honrao on 21-Nov-2017  */
+	.Filter-Section-Label {
+		height: 24px;
+		font-family: AkzidenzGrotesk !important;
+		font-size: 12px;
+		font-weight: normal;
+		font-style: normal;
+		font-stretch: normal;
+		line-height: normal;
+		letter-spacing: normal;
+		text-align: center;
+		color: var(--charcoal);
+		text-transform: capitalize;
+	}
+
+	.pd-filter {
+		padding: 10% 30% 0% 20%;
+	}
+
+	.pdt-25 {
+		padding-top: 25%;
+	}
+
+	.pdl-85 {
+		padding-left: 85%;
+	}
+
+	.line {
+		border: solid 1px #b7b7b7;
+		height: 115px;
+		float: left !important;
+		margin-top: 10px;
+		margin-left: 10px;
+	}
+
+	.wd-6 {
+		width: 6% !important;
+	}
+
+	.pd-ft-button {
+		padding: 2% 0% 0% 0%;
+	}
+
+	.dropdown-style {
+		font-family: AkzidenzGrotesk !important;
+		font-size: 13px;
+		font-weight: normal;
+		font-style: normal;
+		font-stretch: normal;
+		line-height: normal;
+		letter-spacing: normal;
+		text-align: left;
+		color: var(--charcoal);
+	}
+
+	.dropdown-menu>li>a:hover,
+	.dropdown-menu>li>a:focus {
+		background-color: var(--sunshineyellow) ! important;
+		color: var(--white);
+	}
+
+	.remove-colpd {
+		padding: 0px;
+	}
+
+	/* Text Capitalization attribute added in filter-label class by Shashank Honrao on 21-Nov-2017 */
+	.filter-label {
+		width: auto !important;
+		font-weight: bold;
+		padding: 1% 0 0% 1.5%;
+		font-family: AkzidenzGrotesk !important;
+		font-size: 13px;
+		font-style: normal;
+		font-stretch: normal;
+		line-height: normal;
+		letter-spacing: normal;
+		color: var(--charcoal);
+		text-transform: capitalize;
+	}
+
+	.filter-value {
+		width: auto !important;
+		padding: 1% 0 0% 1.5%;
+		font-family: AkzidenzGrotesk !important;
+		font-size: 13px;
+		font-weight: normal;
+		font-style: normal;
+		font-stretch: normal;
+		line-height: normal;
+		letter-spacing: normal;
+		text-align: center;
+		color: var(--charcoal);
+	}
+
+	/* Added By Nagesh */
+	.filter-select-value {
+		display: inline-flex;
+		margin-left: 15px;
+		margin-top: 10px;
+	}
+
+	.filter-select-label {
+		white-space: nowrap;
+		font-weight: bold;
+	}
+
+	.wd-overflow {
+		overflow-x: hidden !important;
+	}
+
+	.mg-lt-5 {
+		margin-left: 5px;
+	}
+
+	.mg-lt-15 {
+		margin-left: 15px;
+	}
+
+	.close-icon {
+		background-color: transparent;
+		border: none;
+		padding: 1%;
+	}
+
+	.ButtonPrimary {
+		height: 33px;
+		border-radius: 5px;
+		background-color: var(--navyBlue);
+		border: solid 1px var(--navyBlue);
+		color: var(--white) !important;
+		border: 0;
+	}
+
+	.ButtonPrimary:hover {
+		color: var(--white);
+	}
+
+	.ButtonSecondary {
+		width: 112px;
+		height: 33px;
+		border-radius: 5px;
+		background-color: var(--white);
+		border: solid 1px var(--charcoal);
+		color: var(--charcoal);
+	}
+
+	.selected-filterSection {
+		height: 40px;
+		overflow-x: auto;
+	}
+
+	.filter-mode-width {
+		width: 8% !important;
+		text-align: center;
+	}
+
+	.filter-view-width {
+		width: 12% !important;
+		text-align: center;
+	}
+
+	.filter-section-width {
+		width: 78% !important;
+	}
+
+	.filter-option-width {
+		width: 16% !important;
+	}
+
+}
+
+/*=======================================< 992===========================================  */
+@media (min-width : 992px) {
+	.col-md-1 {
+		width: 10%;
+	}
+
+	.col-md-2 {
+		width: 16.66%;
+	}
+
+	.col-md-3 {
+		width: 25%;
+	}
+
+	.col-md-4 {
+		width: 33.33%;
+	}
+
+	.col-md-5 {
+		width: 41.66%;
+	}
+
+	.col-md-6 {
+		width: 50%;
+	}
+
+	.col-md-7 {
+		width: 58.33%;
+	}
+
+	.col-md-8 {
+		width: 66.66%;
+	}
+
+	.col-md-9 {
+		width: 75%;
+	}
+
+	.col-md-10 {
+		width: 83.33%;
+	}
+
+	.col-md-11 {
+		width: 91.66%;
+	}
+
+	.col-md-12 {
+		width: 100%;
+	}
+
+	.row-filter {
+		margin-right: 0px;
+		margin-left: 0px;
+	}
+
+	.company-icon {
+		background-image: url("../images/gfo.png");
+		width: 40px;
+		height: 40px;
+		background-repeat: no-repeat;
+	}
+
+	.company-icon:active {
+		background-image: url("../images/gfo_hover.png");
+		width: 40px;
+		height: 40px;
+		background-repeat: no-repeat;
+	}
+
+	.company-icon:hover {
+		background-image: url("../images/gfo_hover.png");
+		width: 40px;
+		height: 40px;
+		background-repeat: no-repeat;
+	}
+
+	.department-icon {
+		background-image: url("../images/department-md.png");
+		width: 40px;
+		height: 40px;
+		background-repeat: no-repeat;
+	}
+
+	.department-icon:active {
+		background-image: url("../images/bluedepartment-md.png");
+		width: 40px;
+		height: 40px;
+		background-repeat: no-repeat;
+	}
+
+	.department-icon:hover {
+		background-image: url("../images/bluedepartment-md.png");
+		width: 40px;
+		height: 40px;
+		background-repeat: no-repeat;
+	}
+
+	.region-icon {
+		background-image: url("../images/region-md.png");
+		width: 40px;
+		height: 40px;
+		background-repeat: no-repeat;
+	}
+
+	.region-icon:active {
+		background-image: url("../images/blueselling-region.png");
+		width: 40px;
+		height: 40px;
+		background-repeat: no-repeat;
+	}
+
+	.region-icon:hover {
+		background-image: url("../images/blueselling-region.png");
+		width: 40px;
+		height: 40px;
+		background-repeat: no-repeat;
+	}
+
+	/* Height of Filters-part-1 increased by Shashank Honrao on 16-Nov-2017 */
+	.Filters-part-1 {
+		height: 135px;
+		background-color: var(--white);
+		border: 1px solid #aaa;
+	}
+
+	.Mode {
+		width: 100%;
+		font-family: AkzidenzGrotesk !important;
+		text-align: center;
+		margin-bottom: 5px;
+		margin-top: 10px;
+		font-size: 13px !important;
+		font-weight: 700;
+		text-decoration: none;
+		color: black;
+	}
+
+	.View {
+		width: 28px;
+		height: 27px;
+		font-family: AkzidenzGrotesk !important;
+		font-size: 13px;
+		font-weight: normal;
+		font-style: normal;
+		font-stretch: normal;
+		line-height: normal;
+		letter-spacing: normal;
+		color: var(--charcoal);
+	}
+
+	.Filters {
+		width: 100%;
+		font-family: AkzidenzGrotesk !important;
+		font-size: 13px !important;
+		font-weight: 700;
+		margin-top: 12px;
+		margin-bottom: 10px;
+		color: black;
+	}
+
+	.Mode-Select {
+		background-color: var(--sunshineyellow) !important;
+		color: var(--white) !important;
+	}
+
+	.Mode-Normal {
+		width: 48px !important;
+		height: 23px;
+		background-color: var(--white);
+		color: var(--charcoal);
+		font-family: AkzidenzGrotesk !important;
+		font-size: 13px;
+		font-weight: normal;
+		font-style: normal;
+		font-stretch: normal;
+		line-height: normal;
+		letter-spacing: normal;
+		padding: 0px 10px;
+		text-align: left;
+		border: 0;
+	}
+
+	.View-Normal {
+		width: 112px !important;
+		height: 25px;
+		border-radius: 5px;
+		background-color: var(--white);
+		color: var(--charcoal);
+		font-family: AkzidenzGrotesk !important;
+		font-size: 13px;
+		font-weight: normal;
+		font-style: normal;
+		font-stretch: normal;
+		line-height: normal;
+		letter-spacing: normal;
+		padding: 0px 10px;
+		text-align: left;
+		border: 0;
+	}
+
+	.View-Select {
+		color: var(--white) !important;
+		background-color: var(--sunshineyellow);
+	}
+
+	.container-fluid-filter {
+		padding-right: 0px;
+		padding-left: 0px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	.Filter-Section-Label {
+		height: 24px;
+		font-family: AkzidenzGrotesk !important;
+		font-size: 12px;
+		font-weight: normal;
+		font-style: normal;
+		font-stretch: normal;
+		line-height: normal;
+		letter-spacing: normal;
+		text-align: center;
+		color: var(--charcoal);
+		text-transform: capitalize;
+	}
+
+	.pd-filter {
+		padding: 10% 30% 0% 20%;
+	}
+
+	.pdt-25 {
+		padding-top: 25%;
+	}
+
+	.pdl-85 {
+		padding-left: 85%;
+	}
+
+	.line {
+		border: solid 1px #b7b7b7;
+		height: 115px;
+		float: left !important;
+		margin-top: 10px;
+		margin-left: 10px;
+	}
+
+	.wd-6 {
+		width: 6% !important;
+	}
+
+	.pd-ft-button {
+		padding: 2% 0% 0% 5%;
+	}
+
+	.dropdown-style {
+		font-family: AkzidenzGrotesk !important;
+		font-size: 13px;
+		font-weight: normal;
+		font-style: normal;
+		font-stretch: normal;
+		line-height: normal;
+		letter-spacing: normal;
+		text-align: left;
+		color: var(--charcoal);
+	}
+
+	.dropdown-menu>li>a:hover,
+	.dropdown-menu>li>a:focus {
+		background-color: var(--sunshineyellow) !important;
+		color: var(--white);
+	}
+
+	.remove-colpd {
+		padding: 0px;
+	}
+
+	.filter-label {
+		width: auto !important;
+		font-weight: bold;
+		padding: 1% 0 0% 1.5%;
+		font-family: AkzidenzGrotesk !important;
+		font-size: 13px;
+		font-style: normal;
+		font-stretch: normal;
+		line-height: normal;
+		letter-spacing: normal;
+		color: var(--charcoal);
+		text-transform: capitalize;
+	}
+
+	.filter-value {
+		width: auto !important;
+		padding: 1% 0 0% 0.5%;
+		font-family: AkzidenzGrotesk !important;
+		font-size: 13px;
+		font-weight: normal;
+		font-style: normal;
+		font-stretch: normal;
+		line-height: normal;
+		letter-spacing: normal;
+		text-align: center;
+		color: var(--charcoal);
+	}
+
+	/* Added By Naegsh Jha */
+	.filter-select-value {
+		display: inline-flex;
+		margin-left: 15px;
+		margin-top: 10px;
+	}
+
+	.filter-select-label {
+		white-space: nowrap;
+		font-weight: bold;
+	}
+
+	.wd-overflow {
+		overflow-x: hidden !important;
+	}
+
+	.mg-lt-5 {
+		margin-left: 5px;
+	}
+
+	.mg-lt-15 {
+		margin-left: 15px;
+	}
+
+	.close-icon {
+		background-color: transparent;
+		border: none;
+		padding: 1%;
+	}
+
+	.ButtonPrimary {
+		height: 33px;
+		border-radius: 5px;
+		background-color: var(--navyBlue);
+		border: solid 1px var(--navyBlue);
+		color: var(--white) !important;
+		border: 0;
+	}
+
+	.ButtonPrimary:hover {
+		color: var(--white);
+	}
+
+	.ButtonSecondary {
+		width: 112px;
+		height: 33px;
+		border-radius: 5px;
+		background-color: var(--white);
+		border: solid 1px var(--charcoal);
+		color: var(--charcoal);
+	}
+
+	.selected-filterSection {
+		height: 40px;
+		overflow-x: auto;
+	}
+
+	.filter-mode-width {
+		width: 8% !important;
+		text-align: center;
+	}
+
+	.filter-view-width {
+		width: 12% !important;
+		text-align: center;
+	}
+
+	.filter-section-width {
+		width: 77% !important;
+	}
+
+	.filter-option-width {
+		width: 14% !important;
+	}
+
+	.line {
+		margin-left: 25px !important;
+	}
+}
+
+/* =====================================< 1800=============================== */
+@media (min-width : 1200px) {
+	.col-lg-1 {
+		width: 10%;
+	}
+
+	.col-lg-2 {
+		width: 16.66%;
+	}
+
+	.col-lg-3 {
+		width: 25%;
+	}
+
+	.col-lg-4 {
+		width: 33.33%;
+	}
+
+	.col-lg-5 {
+		width: 41.66%;
+	}
+
+	.col-lg-6 {
+		width: 50%;
+	}
+
+	.col-lg-7 {
+		width: 58.33%;
+	}
+
+	.col-lg-8 {
+		width: 66.66%;
+	}
+
+	.col-lg-9 {
+		width: 75%;
+	}
+
+	.col-lg-10 {
+		width: 83.33%;
+	}
+
+	.col-lg-11 {
+		width: 91.66%;
+	}
+
+	.col-lg-12 {
+		width: 100%;
+	}
+
+	.company-icon {
+		background-image: url("../images/gfo.png");
+		width: 40px;
+		height: 40px;
+		background-repeat: no-repeat;
+	}
+
+	.company-icon:active {
+		background-image: url("../images/gfo_hover.png");
+		width: 40px;
+		height: 40px;
+		background-repeat: no-repeat;
+	}
+
+	.company-icon:hover {
+		background-image: url("../images/gfo_hover.png");
+		width: 40px;
+		height: 40px;
+		background-repeat: no-repeat;
+	}
+
+	.department-icon {
+		background-image: url("../images/department-md.png");
+		width: 40px;
+		height: 40px;
+		background-repeat: no-repeat;
+	}
+
+	.department-icon:active {
+		background-image: url("../images/bluedepartment-md.png");
+		width: 40px;
+		height: 40px;
+		background-repeat: no-repeat;
+	}
+
+	.department-icon:hover {
+		background-image: url("../images/bluedepartment-md.png");
+		width: 40px;
+		height: 40px;
+		background-repeat: no-repeat;
+	}
+
+	.region-icon {
+		background-image: url("../images/region-md.png");
+		width: 40px;
+		height: 40px;
+		background-repeat: no-repeat;
+	}
+
+	.region-icon:active {
+		background-image: url("../images/blueselling-region.png");
+		width: 40px;
+		height: 40px;
+		background-repeat: no-repeat;
+	}
+
+	.region-icon:hover {
+		background-image: url("../images/blueselling-region.png");
+		width: 40px;
+		height: 40px;
+		background-repeat: no-repeat;
+	}
+
+	.line {
+		border: solid 1px #b7b7b7;
+		height: 115px;
+		float: left !important;
+		margin-top: 10px;
+		margin-left: 10px;
+	}
+
+	.wd-5 {
+		width: 5% ! important;
+	}
+
+	/* Height of Filters-part-1 increased by Shashank Honrao on 16-Nov-2017 */
+	.Filters-part-1 {
+		height: 135px;
+		background-color: var(--white);
+		border: 1px solid #aaa;
+	}
+
+	.Mode {
+		width: 100%;
+		font-family: AkzidenzGrotesk !important;
+		text-align: center;
+		margin-bottom: 5px;
+		margin-top: 10px;
+		font-size: 13px !important;
+		font-weight: 700;
+		text-decoration: none;
+		color: black;
+	}
+
+	.View {
+		width: 28px;
+		height: 27px;
+		font-family: AkzidenzGrotesk !important;
+		font-size: 13px;
+		font-weight: normal;
+		font-style: normal;
+		font-stretch: normal;
+		line-height: normal;
+		letter-spacing: normal;
+		color: var(--charcoal);
+	}
+
+	.Filters {
+		width: 100%;
+		font-family: AkzidenzGrotesk !important;
+		font-size: 13px !important;
+		font-weight: 700;
+		margin-top: 12px;
+		margin-bottom: 10px;
+		color: black;
+	}
+
+	.Mode-Select {
+		background-color: var(--sunshineyellow) ! important;
+		color: var(--white) !important;
+	}
+
+	.Mode-Normal {
+		width: 48px !important;
+		height: 23px;
+		background-color: var(--white);
+		color: var(--charcoal);
+		font-family: AkzidenzGrotesk !important;
+		font-size: 13px;
+		font-weight: normal;
+		font-style: normal;
+		font-stretch: normal;
+		line-height: normal;
+		letter-spacing: normal;
+		padding: 0px 10px;
+		text-align: left;
+		border: 0;
+	}
+
+	.View-Normal {
+		width: 112px !important;
+		height: 25px;
+		border-radius: 5px;
+		background-color: var(--white);
+		color: var(--charcoal);
+		font-family: AkzidenzGrotesk !important;
+		font-size: 13px;
+		font-weight: normal;
+		font-style: normal;
+		font-stretch: normal;
+		line-height: normal;
+		letter-spacing: normal;
+		padding: 0px 10px;
+		text-align: left;
+		border: 0;
+	}
+
+	.View-Select {
+		color: var(--white) !important;
+		background-color: var(--sunshineyellow);
+	}
+
+	.container-fluid-filter {
+		padding-right: 0px;
+		padding-left: 0px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	.Filter-Section-Label {
+		height: 24px;
+		font-family: AkzidenzGrotesk !important;
+		font-size: 12px;
+		font-weight: normal;
+		font-style: normal;
+		font-stretch: normal;
+		line-height: normal;
+		letter-spacing: normal;
+		text-align: center;
+		color: var(--charcoal);
+		text-transform: capitalize;
+	}
+
+	.pd-filter {
+		padding: 10% 30% 0% 20%;
+	}
+
+	.pdt-25 {
+		padding-top: 25%;
+	}
+
+	.pdl-85 {
+		padding-left: 85%;
+	}
+
+	.pd-ft-button {
+		padding: 2% 0% 0% 5%;
+	}
+
+	.dropdown-style {
+		font-family: AkzidenzGrotesk !important;
+		font-size: 13px;
+		font-weight: normal;
+		font-style: normal;
+		font-stretch: normal;
+		line-height: normal;
+		letter-spacing: normal;
+		text-align: left;
+		color: var(--charcoal);
+	}
+
+	.dropdown-menu>li>a:hover,
+	.dropdown-menu>li>a:focus {
+		background-color: var(--sunshineyellow) !important;
+		color: var(--white);
+	}
+
+	.remove-colpd {
+		padding: 0px;
+	}
+
+	.filter-label {
+		width: auto !important;
+		font-weight: bold;
+		padding: 1% 0 0% 1.5%;
+		font-family: AkzidenzGrotesk !important;
+		font-size: 13px;
+		font-style: normal;
+		font-stretch: normal;
+		line-height: normal;
+		letter-spacing: normal;
+		color: var(--charcoal);
+		text-transform: capitalize;
+	}
+
+	.filter-value {
+		width: auto !important;
+		padding: 1% 0 0% 0.5%;
+		font-family: AkzidenzGrotesk !important;
+		font-size: 13px;
+		font-weight: normal;
+		font-style: normal;
+		font-stretch: normal;
+		line-height: normal;
+		letter-spacing: normal;
+		text-align: center;
+		color: var(--charcoal);
+	}
+
+	/* Added By Naegsh Jha */
+	.filter-select-value {
+		display: inline-flex;
+		margin-left: 15px;
+		margin-top: 10px;
+	}
+
+	.filter-select-label {
+		white-space: nowrap;
+		font-weight: bold;
+	}
+
+	.wd-overflow {
+		overflow-x: hidden !important;
+	}
+
+	.mg-lt-5 {
+		margin-left: 5px;
+	}
+
+	.mg-lt-15 {
+		margin-left: 15px;
+	}
+
+	.close-icon {
+		background-color: transparent;
+		border: none;
+		padding: 1%;
+	}
+
+	.ButtonPrimary {
+		height: 33px;
+		border-radius: 5px;
+		background-color: var(--navyBlue);
+		border: solid 1px var(--navyBlue);
+		color: var(--white) !important;
+		border: 0;
+	}
+
+	.ButtonPrimary:hover {
+		color: var(--white);
+	}
+
+	.ButtonSecondary {
+		width: 112px;
+		height: 33px;
+		border-radius: 5px;
+		background-color: var(--white);
+		border: solid 1px var(--charcoal);
+		color: var(--charcoal);
+		margin: 3%;
+	}
+
+	.selected-filterSection {
+		height: 40px;
+		overflow-x: auto;
+	}
+
+	.row-filter {
+		margin-right: 0px;
+		margin-left: 0px;
+	}
+
+	.filter-mode-width {
+		width: 6% !important;
+		text-align: center;
+	}
+
+	.filter-view-width {
+		width: 10% !important;
+		text-align: center;
+	}
+
+	.filter-section-width {
+		width: 82% !important;
+	}
+
+	.filter-option-width {
+		width: 10% !important;
+	}
+
+	.line {
+		margin-left: 10px !important;
+	}
+}
+
+.pd-lf-0 {
+	padding-left: 0px;
+}
+
+.pd-rt-0 {
+	padding-right: 0px;
+}
+
+.wd-auto {
+	width: auto !important;
+}
+
+.mg-3 {
+	margin: 3%;
+}
+
+.ft-rt {
+	float: right;
+}
+
+.mg-bottom-0 {
+	margin-bottom: 0px;
+}
+
+.dropdown-submenu {
+	position: relative;
+	font-size: 12px !important;
+}
+
+.dropdown-submenu>.dropdown-menu {
+	top: 0;
+	left: 100%;
+	margin-top: -6px;
+	margin-left: -1px;
+	-webkit-border-radius: 0 6px 6px 6px;
+	-moz-border-radius: 0 6px 6px;
+	border-radius: 0 6px 6px 6px;
+}
+
+.dropdown-submenu:hover>.dropdown-menu {
+	display: block;
+}
+
+.dropdown-submenu>a:after {
+	display: block;
+	content: " ";
+	float: right;
+	width: 0;
+	height: 0;
+	border-color: transparent;
+	border-style: solid;
+	border-width: 5px 0 5px 5px;
+	border-left-color: #ccc;
+	margin-top: 5px;
+	margin-right: -10px;
+}
+
+.dropdown-submenu:hover>a:after {
+	border-left-color: #fff;
+}
+
+.dropdown-submenu.pull-left {
+	float: none;
+}
+
+.dropdown-submenu.pull-left>.dropdown-menu {
+	left: -100%;
+	margin-left: 10px;
+	-webkit-border-radius: 6px 0 6px 6px;
+	-moz-border-radius: 6px 0 6px 6px;
+	border-radius: 6px 0 6px 6px;
+}
+
+.ul-submenu {
+	max-height: 200px;
+	overflow-y: auto;
+}
+
+.ul-nosubmenu {
+	max-height: 200px;
+}
+
+.ranges li {
+	font-size: 13px;
+	background-color: transparent !important;
+	border: none !important;
+	border-radius: 0px !important;
+	color: black !important;
+	padding: 0px !important;
+	margin-bottom: 8px;
+	cursor: pointer;
+}
+
+;
+
+.ranges li.active {
+	background-color: #e7a000 !important;
+	border: 1px solid #e7a000 !important;
+	color: #fff;
+}
+
+.ranges li:hover {
+	background-color: #e7a000 !important;
+	border: 1px solid #e7a000 !important;
+	color: #fff;
+}
+
+.jj-fs-12 {
+	font-size: 12px;
+}
+
+.jj-ff-Az {
+	font-family: AkzidenzGrotesk;
+}

@@ -1,0 +1,141 @@
+<!-- 
+ * ========================================================================
+ * Added by Reeth with ref to Modularize view of Filter Section  07-03-2017   
+ * ========================================================================
+ * -->
+<div class="container-fluid-filter" data-ng-controller="filterController" data-ng-init="init()">
+	<div class="Filters-part-1">
+		<div>
+			<div>
+				<div class="col-sm-1 col-md-1 col-lg-1 wd-6 wd-5 filter-mode-width">
+					<div class="Mode">
+						<div data-ng-bind="filterObjects.mode"></div>
+					</div>
+					<div>
+						<div class="btn-group-vertical border_mv">
+							<button type="button" class="btn Mode-Normal" data-ng-disabled="modeValue.name == 'Tile'"
+								data-ng-class="{'Mode-Select':mode == modeValue.name}"
+								data-ng-repeat="modeValue in filterObjects.modeSection |orderBy : 'order'"
+								data-ng-click="selectedMode(modeValue.name)" data-ui-sref="{{modeValue.link}}"
+								data-ui-sref-opts="{location:false,reload: false}">{{modeValue.name}}</button>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-1 col-md-1 col-lg-1 filter-view-width">
+					<div>
+						<div class="Mode">
+							<div data-ng-bind="filterObjects.view"></div>
+						</div>
+					</div>
+					<div>
+						<div class="btn-group-vertical border_mv">
+							<button type="button" class="btn View-Normal"
+								data-ng-class="{'View-Select':view == viewValue}"
+								data-ng-disabled='loggedInUserWWID==undefined &amp;&amp; (viewValue=="My Profile" || viewValue=="Favorites")'
+								data-ng-repeat="viewValue in filterObjects.viewSection"
+								data-ng-click="selectedView(viewValue)">{{viewValue}}</button>
+						</div>
+					</div>
+				</div>
+				<!-- <div class="col-sm-1 col-md-1 col-lg-1 line"></div> -->
+				<div class="line"></div>
+				<div class="col-sm-10 col-md-10 col-lg-10 filter-section-width" style="width: 80%;">
+					<div>
+						<div class="Filters">
+							<!-- <div class="col-sm-1 col-md-1 col-lg-1"></div> -->
+							<div data-ng-bind="filterObjects.filter"></div>
+						</div>
+					</div>
+					<div>
+						<div data-ng-if="false" class="col-sm-1 col-md-1 col-lg-1 remove-colpd filter-option-width"
+							data-ng-repeat="filterValue in filterObjects.filterSection |orderBy : 'order' ">
+							<div>
+								<div class="dropdown" style="padding: 4px 40px;">
+									<div class="dropdown-toggle" data-ng-class="filterValue.image"
+										data-toggle="dropdown" style="cursor: pointer;"></div>
+									<ul class="dropdown-menu multi-level" id="parentDropDown" style="cursor: pointer;"
+										data-ng-class="(filterValue.hasSubMenu == 'true') ? 'ul-nosubmenu':'ul-submenu'">
+										<li data-ng-repeat="value in filterValue.list"
+											data-ng-show="value.secondLevel.length != 0"
+											class="dropdown-style dropdown-submenu"><a href="#">{{value.firstLevel}}</a>
+											<ul class="dropdown-menu" data-ng-if="value.secondLevel.length != 0">
+												<li data-ng-repeat="secList in value.secondLevel"><a href="#"
+														data-ng-click="selectedFilter(filterValue.name,secList)"
+														style="font-size: 12px;">{{secList}}</a></li>
+											</ul>
+										</li>
+										<li data-ng-repeat="value in filterValue.list"
+											data-ng-show="value.secondLevel.length == 0" class="dropdown-style"><a
+												data-ng-click="selectedFilter(filterValue.name,value.firstLevel)"
+												href="#">{{value.firstLevel}}</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="Filter-Section-Label">{{
+								addSpace(filterValue.name) }}</div>
+						</div>
+						<div class="col-xs-2 col-sm-2 col-md-1 col-lg-1 col-xl-1 no-padding"
+							data-ng-repeat="filterValue in filterObjects.filterSection |orderBy : 'order' ">
+							<div class="dropdown-toggle filter-logo" data-ng-class="filterValue.image"
+								data-toggle="dropdown"></div>
+							<ul class="dropdown-menu multi-level jj_font_13" id="parentDropDown"
+								style="cursor: pointer;"
+								data-ng-class="(filterValue.hasSubMenu == 'true') ? 'ul-nosubmenu':'ul-submenu'">
+								<li data-ng-repeat="value in filterValue.list"
+									data-ng-show="value.secondLevel.length != 0"
+									class="dropdown-style dropdown-submenu"><a href="#">{{value.firstLevel}}</a>
+									<ul class="dropdown-menu" data-ng-if="value.secondLevel.length != 0">
+										<li data-ng-repeat="secList in value.secondLevel"><a href="#"
+												data-ng-click="selectedFilter(filterValue.name,secList)"
+												style="font-size: 12px;">{{secList}}</a></li>
+									</ul>
+								</li>
+								<li data-ng-repeat="value in filterValue.list"
+									data-ng-show="value.secondLevel.length == 0" class="dropdown-style"><a
+										data-ng-click="selectedFilter(filterValue.name,value.firstLevel)"
+										href="#">{{value.firstLevel}}</a></li>
+							</ul>
+							<div class="pad-tp-5 Filter-Section-Label">{{
+								addSpace(filterValue.name) }}</div>
+						</div>
+						<div class="col-sm-2 col-md-2 col-lg-2 pd-ft-button">
+							<button type="submit" class="btn ButtonPrimary jj_font_13" data-ng-click="applyFilter(view)"
+								data-ng-disabled="!selectedFilterList.length">
+								Apply Filters <span data-ng-if="count > 0" style="color: white;">({{count}})</span>
+							</button>
+						</div>
+						<div class="pull-right">
+							<img class="filter-links-images" data-ng-click="redirectToSkillsSearchPage();"
+								src="../../Main/image/skillSearch.png" />
+						</div>
+						<div class="pull-right" style="margin-right: 2px;">
+							<img class="filter-links-images cursorDisabled" style="border-radius: 0;"
+								src="../../Main/image/profiles_community_white.png" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row panel panel-default mg-bottom-0" data-ng-if="selectedFilterList.length">
+		<div class="col-sm-10 col-md-10 col-lg-10 selected-filterSection wd-overflow">
+			<span data-ng-repeat="valueList in selectedFilterList" class="mg-lt-15"> <span
+					class="filter-select-label">{{valueList.key}}
+					:</span> <span data-ng-repeat="selectedValue in valueList.value"> <span class="filter-select-value">
+						<span>{{selectedValue}}</span>
+						<span class="mg-lt-5">
+							<button class="glyphicon glyphicon-remove-circle close-icon"
+								data-ng-click="removeSelected(valueList.key,selectedValue)"></button>
+						</span>
+					</span>
+				</span>
+
+			</span>
+
+		</div>
+		<div class="col-sm-2 col-md-2 col-lg-2">
+			<button type="submit" class="jj-secondary-button mg-3 ft-rt" data-ng-click="clearFilter(view)">Clear
+				Filters</button>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,462 @@
+/*
+special rules for a special browser: ie6
+*/
+
+/*
+set hasLayout so banner background displays with pearls.blue
+*/
+.banner {
+    zoom: 1;
+}
+
+/*
+input.portlet-form-button wraps otherwise
+*/
+.caf-button-l, .caf-button-r {
+    display: inline-block;
+}
+
+/*
+for some reason if padding-bottom set to zero, ie displays padding-bottom as 1em  
+*/
+.caf-popup-menu li {
+    padding-bottom: 1px;
+}
+
+/*
+need fixed width on popup menus to prevent them from expanding to full page width
+*/
+.caf-popup-menu {
+	width: 200px;
+}
+.nav-menu {
+    width: @skin sizes/nav-link-width;;
+}
+
+/* don't let group in rtl pp dialog slide over */
+.caf-box-group {
+    zoom: 1;
+}
+
+/* ie rtl pp dialog displays first selected person way too far right, if his/her name has rtl chars */
+.caf-swap-picker, ol.caf-listbox, .caf-listbox li {
+    position: relative;
+    zoom: 1;
+}
+
+/* makes ie obey 0 margins and padding for some reason */
+.caf-listbox li {
+	border: 1px solid tranparent;
+}
+
+/*
+prevent tables with width="100%" from spilling over edge of dialog
+also, in rtl mode, table width="100%" pushes the dialog away from its shadow
+*/
+.caf-dialog-content {
+    width: 100%;
+}
+
+/* don't need to offset legend padding in ie */
+legend {
+    padding: 0;
+}
+
+/* fixes cell-truncation and row-containment for ie6 + truncated-column + drag-to-resize */
+.caf-truncate-padding {
+    position: relative;
+}
+
+/*
+in quirks-mode spin-buttons are shifted 1em down for ff and 1em up for ie
+*/
+.caf-timepicker .caf-spinbuttons {
+    top: 0.5em;
+    line-height: 1;
+}
+
+/*
+make left edge of checkbox line up with left edge of other inputs in property-line
+*/
+.caf-property-line input.caf-checkbox, .caf-property-line input.caf-radio {
+    margin-@skin align/start;: -4px;
+}
+
+
+/*
+Non PNG-trasperent backgrounds for dialog and portlets
+*/
+.caf-dialog-lt {
+	background-image:none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="@skin images/dialog-lt.gif;", sizingMethod="fixed");
+}
+.caf-dialog-rt {
+    width: expression(parentNode.offsetWidth);
+	height:9px;
+	background-image:none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="@skin images/dialog-rt.gif;", sizingMethod="scale");
+}
+.caf-dialog-lb {
+	height:expression(parentNode.offsetHeight - 2);
+	background-image:none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="@skin images/dialog-lb.gif;", sizingMethod="scale");
+}
+.caf-dialog-rb {
+	width:expression(parentNode.offsetWidth - 2);
+	height:expression(parentNode.offsetHeight - 5);
+	background-image:none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="@skin images/dialog-rb.gif;", sizingMethod="scale");
+}
+
+.caf-task-dialog .caf-dialog-lt {
+	background-image:none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="@skin images/dialog-task-lt.gif;", sizingMethod="fixed");
+
+}
+.caf-task-dialog .caf-dialog-rt {
+	left:5px;
+	background-image:none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="@skin images/dialog-task-rt.gif;", sizingMethod="scale");
+
+}
+.caf-task-dialog .caf-dialog-lb {
+	top:26px; left:1px;
+	height:expression(parentNode.offsetHeight - 5);
+	background-image:none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="@skin images/dialog-task-lb.gif;", sizingMethod="scale");
+
+}
+.caf-task-dialog .caf-dialog-rb {
+	top: 26px; left:7px;
+	background-image:none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="@skin images/dialog-task-rb.gif;", sizingMethod="scale");
+
+}
+
+.titlebar {
+	height: 20px;
+	overflow: hidden;
+}
+.titlebar .titlebar-top {
+    width: expression(parentNode.offsetWidth-16);
+    background-image:none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="@skin images/titlebar-bg.gif;", sizingMethod="scale");
+	top: 0px;
+    left: 6px;
+    height: 50px;
+}
+
+.titlebar span.caf-content {
+    @skin align/start;: 3px;
+    @skin align/end;: 0;
+	margin: 0px;
+    padding: 3px 0 0 0;
+    width: expression(parentNode.offsetWidth-23); /* making this wider hangs ie6 */
+}
+.titlebar span.caf-content .caf-title {
+	padding-left: 10px;
+}
+
+/* ie aligns icons a little lower than ff */
+.titlebar-icons {
+    top: 0.1em;
+	@skin align/end;: 0;
+}
+
+.titlebar td.titlebar-left, .titlebar td.titlebar-right {
+    height: expression(parentNode.parentNode.parentNode.offsetHeight + 3);
+}
+.titlebar .titlebar-left {
+    background-image: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="@skin images/titlebar-left-bg.gif;", sizingMethod="fixed");
+	left: -1px;
+}
+.titlebar .titlebar-right {
+    background-image :none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="@skin images/titlebar-right-bg.gif;", sizingMethod="fixed");
+	left: expression(parentNode.offsetWidth - 10);
+}
+
+/* top-left */
+.no-titlebar {
+}
+/* top 7 - 5 - 10 */
+.no-titlebar .portlet-titlebar {
+    width: expression(parentNode.offsetWidth - 16);
+}
+/* top-right */
+.no-titlebar .portlet-body-border {
+}
+.no-titlebar .portlet-body-l,
+.no-titlebar .portlet-body-lb {
+    left: 0;
+}
+.no-titlebar .portlet-body-l,
+.no-titlebar .portlet-body-r {
+    height: expression(parentNode.offsetHeight - 29);
+}
+.noodle-editable .no-titlebar .portlet-body-l,
+.noodle-editable .no-titlebar .portlet-body-r {
+    height: expression(parentNode.offsetHeight - 45);
+}
+.no-titlebar .portlet-body-r {
+	left: expression(parentNode.offsetWidth - 6);
+}
+.no-titlebar .portlet-body-rb {
+	left: expression(parentNode.offsetWidth - 21);
+}
+.no-titlebar .portlet-body-b {
+    left: 13px;
+	width: expression(parentNode.offsetWidth - 34);
+}
+
+/* avoid horizontal scrollbar when vertical scrollbar is present */
+.portal-page table,
+div.portlet-column {
+    width: 97%;
+}
+.portlet-column table {
+    width: 100%;
+}
+
+.portlet-body-l {
+    height: expression(parentNode.offsetHeight - 10);
+	background-image:none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="@skin images/portlet-body-l.gif;", sizingMethod="scale");
+    left: -3px;
+}
+.noodle-editable .portlet-body-l {
+    height: expression(parentNode.offsetHeight - 25);
+}
+.portlet-minimized .portlet-body-l,
+.portlet-maximized .portlet-body-l {
+    height: expression(parentNode.offsetHeight - 10);
+}
+.portlet-body-r {
+    height: expression(parentNode.offsetHeight-9);
+	left:expression(parentNode.offsetWidth-9);
+    background-image:none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="@skin images/portlet-body-r.gif;", sizingMethod="scale");
+}
+.noodle-editable .portlet-body-r {
+    height: expression(parentNode.offsetHeight - 25);
+}
+.portlet-minimized .portlet-body-r,
+.portlet-maximized .portlet-body-r {
+    height: expression(parentNode.offsetHeight - 10);
+}
+.portlet-body-b {
+    background-image:none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="@skin images/portlet-body-b.gif;", sizingMethod="scale");
+    top: expression(parentNode.offsetHeight - 10);
+	width: expression(parentNode.offsetWidth - 33);
+	left:9px;
+}
+.noodle-editable .portlet-body-b {
+    top: expression(parentNode.offsetHeight - 25);
+    background-image:none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="@skin images/portlet-body-editable-b.gif;", sizingMethod="scale");
+}
+.portlet-minimized .portlet-body-b {
+    top: expression(parentNode.offsetHeight - 10);
+    background-image:none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="@skin images/portlet-body-minimized-b.gif;", sizingMethod="scale");
+}
+.portlet-maximized .portlet-body-b {
+    top: expression(parentNode.offsetHeight - 10);
+    background-image:none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="@skin images/portlet-body-b.gif;", sizingMethod="scale");
+}
+.portlet-body-lb {
+    background-image:none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="@skin images/portlet-body-lb.gif;", sizingMethod="fixed");
+    top: expression(parentNode.offsetHeight - 10);
+	left:-4px;
+}
+.noodle-editable .portlet-body-lb {
+    top: expression(parentNode.offsetHeight - 25);
+	background-image:none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="@skin images/portlet-body-editable-lb.gif;", sizingMethod="scale");
+}
+.portlet-minimized .portlet-body-lb {
+    top: expression(parentNode.offsetHeight - 10);
+	background-image:none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="@skin images/portlet-body-minimized-lb.gif;", sizingMethod="scale");
+}
+.portlet-maximized .portlet-body-lb {
+    top: expression(parentNode.offsetHeight - 10);
+	background-image:none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="@skin images/portlet-body-lb.gif;", sizingMethod="scale");
+}
+.portlet-body-rb {
+    background-image:none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="@skin images/portlet-body-rb.gif;", sizingMethod="fixed");
+    top: expression(parentNode.offsetHeight - 9);
+	left:expression(parentNode.offsetWidth - 24);
+}
+.noodle-editable .portlet-body-rb {
+    top: expression(parentNode.offsetHeight - 25);
+	background-image:none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="@skin images/portlet-body-editable-rb.gif;", sizingMethod="scale");
+}
+.portlet-minimized .portlet-body-rb {
+    top: expression(parentNode.offsetHeight - 10);
+	background-image:none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="@skin images/portlet-body-minimized-rb.gif;", sizingMethod="scale");
+}
+.portlet-maximized .portlet-body-rb {
+    top: expression(parentNode.offsetHeight - 10);
+	background-image:none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="@skin images/portlet-body-rb.gif;", sizingMethod="scale");
+}
+
+.titlebar span.caf-content {
+	margin-right: 0px;
+}
+
+.caf-popup-menu .caf-popup-lt {
+	background-image:none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="@skin images/caf-popup-lt.gif;", sizingMethod="fixed");
+}
+.caf-popup-menu .caf-popup-rt {
+	width:expression(parentNode.offsetWidth);
+	background-image:none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="@skin images/caf-popup-rt.gif;", sizingMethod="scale");
+}
+.caf-popup-menu .caf-popup-lb {
+	height:expression(parentNode.offsetHeight);
+	background-image:none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="@skin images/caf-popup-lb.gif;", sizingMethod="scale");
+}
+.caf-popup-menu .caf-popup-rb {
+	width:expression(parentNode.offsetWidth - 3);
+	height:expression(parentNode.offsetHeight - 2);
+	background-image:none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="@skin images/caf-popup-rb.gif;", sizingMethod="scale");
+	bottom:-5px;
+}
+
+.caf-login, .caf-login .portlet-container, .caf-login .portlet-column, .mws-login .caf-float-start {
+	position:relative;
+}
+.mws-login {
+	background-image:none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="@skin images/logo-login.gif;", sizingMethod="scale");
+	width:100%;
+	height:100%;
+}
+.caf-login .portlet-body-border {
+	padding-right:7px;
+}
+.caf-login .portlet-body-lb {
+	background-image:none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="@skin images/portlet-body-login-lb.gif;", sizingMethod="fixed");
+    top: expression(parentNode.offsetHeight - 5);
+	left:0px;
+}
+.caf-login .portlet-body-r {
+	background-image:none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="@skin images/portlet-body-login-r.gif;", sizingMethod="scale");
+	left:expression(parentNode.offsetWidth - 7);
+	height:expression(parentNode.offsetHeight - 6);
+}
+.caf-login .portlet-body-rb {
+	background-image:none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="@skin images/portlet-body-login-rb.gif;", sizingMethod="fixed");
+	top: expression(parentNode.offsetHeight - 6);
+	left:expression(parentNode.offsetWidth - 10);
+}
+.caf-login .portlet-body-b {
+	background-image:none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="@skin images/portlet-body-login-b.gif;", sizingMethod="fixed");
+	left:5px;
+	width: expression(parentNode.offsetWidth - 15);
+	top: expression(parentNode.offsetHeight - 5);
+	height:5px;
+}
+
+/* no content or after for ies, hack for dirty ws */
+.caf-tabs-top li.portlet-section-selected .caf-content div.noodle-dirty a.noodle-name  {
+    background: url(@skin images/required.gif;) top @skin align/start; no-repeat;
+    padding-@skin align/start;: 7px;
+}
+
+/* inline-block needed for regular page-tabs; normal block needed for inner content of tab-bar tabs */
+.noodle-page-tabs li .caf-content, .noodle_tabBar .caf-tab .caf-content {
+    display: inline-block;
+}
+.noodle-page-tabs li span.caf-content span, .noodle-page-tabs li .caf-content a {
+    display: inline-block;
+}
+.noodle_tabBar li span.caf-content span, .noodle_tabBar li .caf-content a {
+    display: block;
+}
+
+/* remove superflous padding from scroll tab's inner content */
+div .noodle_tabBar .noodle_tabBar_tab_left_scroll .caf-content span,
+div .noodle_tabBar .noodle_tabBar_tab_right_scroll .caf-content span {
+    padding: 0;
+}
+
+.noodle-page-tabs li .caf-content div a img,
+.noodle-page-tabs li.portlet-section-selected .caf-content div a img {
+	margin-top:8px;
+	padding-top:0px;
+}
+
+/* tweak tab-collapse icon positioning */
+.noodle-tab-collapse img {
+    position: relative;
+    top: 8px;
+}
+
+/* move 1 pixel further past end */
+.noodle_tabBar div.noodle_tabBar_tab_finder {
+    @skin align/end;: -1;
+}
+
+/* tweak portlet-finder icon positioning */
+.noodle-tab-finder-popup-menu .caf-popup-menu-item .caf-icons,
+.noodle-tab-finder-popup-menu .caf-popup-menu-item-selected .caf-icons,
+.noodle-portlet-finder-popup-menu .caf-popup-menu-item .caf-icons,
+.noodle-portlet-finder-popup-menu .caf-popup-menu-item-selected .caf-icons {
+    top: 2px;
+}
+
+.noodle-tab-finder-popup-menu .caf-popup-lt,
+.noodle-portlet-finder-popup-menu .caf-popup-lt {
+	background-image: url(@skin images/tabfinder-menu-lt-ie.gif;);
+    filter: none;
+}
+.noodle-portlet-finder-popup-menu .caf-popup-lt {
+	background-image: url(@skin images/portletfinder-menu-lt-ie.gif;);
+}
+.noodle-tab-finder-popup-menu .caf-popup-rt,
+.noodle-portlet-finder-popup-menu .caf-popup-rt {
+	width: expression(parentNode.offsetWidth - 5);
+	background-image: url(@skin images/tabfinder-menu-rt-ie.gif;);
+    filter: none;
+}
+.noodle-portlet-finder-popup-menu .caf-popup-rt {
+	background-image: url(@skin images/portletfinder-menu-rt-ie.gif;);
+}
+.noodle-tab-finder-popup-menu .caf-popup-lb,
+.noodle-portlet-finder-popup-menu .caf-popup-lb {
+	height: expression(parentNode.offsetHeight - 21);
+	background-image: url(@skin images/tabfinder-menu-lb-ie.gif;);
+    filter: none;
+}
+.noodle-tab-finder-popup-menu .caf-popup-rb,
+.noodle-portlet-finder-popup-menu .caf-popup-rb {
+	width: expression(parentNode.offsetWidth - 5);
+	height: expression(parentNode.offsetHeight - 21);
+	background-image: url(@skin images/tabfinder-menu-rb-ie.gif;);
+    filter: none;
+}
+
+/* ie shifts header label wrong way -- on top of sortable arrow image */
+.portlet-section-header a.caf-sortable {
+    position: relative;
+    zoom: 1;
+}
+

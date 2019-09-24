@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<!-- <base href="/"> </base> -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="icon" href="Main/image/Profiles.png" />
+	<title>Profiles</title>
+	<!-- Default JS -->
+	<script src="Lib/angular/angular.js"></script>
+	<script src="Lib/agGrid/ag-grid.js"></script>
+	<script src="Lib/dragAndDrop/angular-drag-and-drop-lists.js"></script>
+	<script src="Lib/angular/angular-ui-router.js"></script>
+	<script src="Lib/angular/angular-route.min.js"></script>
+	<script src="Lib/angular/angular-sanitize.min.js"></script>
+	<script src="Lib/angular/angular-idle.min.js"></script>
+	<script src="Lib/select/select.js"></script>
+	<script src="Lib/angular/ng-text-truncate.js"></script>
+	<script src="Lib/ng-infinite-scroll/ng-infinite-scroll.min.js"></script>
+	<!-- <script src="Lib/checklist-model/checklist-model.min.js"></script> -->
+
+	<script src=""></script>
+
+	<!-- JQuery  -->
+	<script src="Lib/jquery-2.1.1/jquery.js"></script>
+	<script type="text/javascript" src="Lib/dateLib/moment.min.js"></script>
+
+	<!-- Bootstrap -->
+	<script src="Lib/bootstrap-3.1.1/js/bootstrap.js"></script>
+	<script src="Lib/bootstrap-3.1.1/js/ui-bootstrap-tpls-0.13.0.min.js"></script>
+	<link href="Lib/bootstrap-3.1.1/css/bootstrap.css" rel="stylesheet" type="text/css">
+	</link>
+	<link href="Lib/bootstrap-3.1.1/css/animate.css" rel="stylesheet" type="text/css">
+	</link>
+	<link href="Lib/select/select.min.css" rel="stylesheet" type="text/css">
+	</link>
+	<script src="Lib/bootstrap-3.1.1/js/bootstrap-datepicker.js"></script>
+	<link href="Lib/bootstrap-3.1.1/css/bootstrap-datepicker.min.css">
+	</link>
+
+
+	<script type="text/javascript" src="Lib/ngCsv/ng-csv.min.js"></script>
+	<script type="text/javascript" src="Lib/fileSaver/FileSaver.js"></script>
+
+	<!-- Controller JS -->
+	<script type="text/javascript" src="./app.js"></script>
+	<script type="text/javascript" src="TMF/logging/logging.js"></script>
+	<script type="text/javascript" src="Header/controller/headerController.js"></script>
+	<script type="text/javascript" src="CommonBD/controller/breadcrumbController.js"></script>
+	<script type="text/javascript" src="Filter/controller/filterController.js"></script>
+	<script type="text/javascript" src="Main/controller/sessionController.js"></script>
+	<script type="text/javascript" src="List/controller/listViewController.js"></script>
+
+
+	<!-- Services Js -->
+	<script type="text/javascript" src="Header/service/headerService.js"></script>
+	<script type="text/javascript" src="CommonBD/service/breadcrumbService.js"></script>
+	<script type="text/javascript" src="Filter/service/filterService.js"></script>
+	<script type="text/javascript" src="List/service/listService.js"></script>
+	<script type="text/javascript" src="TMF/settings/generic/genericSetting.js"></script>
+	<script type="text/javascript" src="TMF/settings/perDimension/perDimensionSetting.js"></script>
+
+
+	<!-- Style Sheets -->
+	<link rel="stylesheet" href="Header/css/header.css">
+	</link>
+	<link rel="stylesheet" href="CommonBD/css/breadcrumb.css">
+	</link>
+	<link rel="stylesheet" href="Filter/css/filter.css">
+	</link>
+	<link rel="stylesheet" href="Main/css/main.css">
+	</link>
+	<link rel="stylesheet" href="List/css/listView.css">
+	</link>
+	<link rel="stylesheet" href="CG510_Common_Skin/css/base.csi">
+	</link>
+
+	<!-- Providers -->
+	<script type="text/javascript" src="Main/service/breadcrumbProvider.js"></script>
+	<script type="text/javascript" src="Main/service/headerProvider.js"></script>
+	<script type="text/javascript" src="Main/service/listProvider.js"></script>
+	<script type="text/javascript" src="Main/service/filterProvider.js"></script>
+	<script type="text/javascript" src="Main/service/restProvider.js"></script>
+
+
+	<!-- ****************************** Time Tracking ****************************** -->
+	<script src="TimeTracking/controllers/timeTrackingHomeController.js"></script>
+	<script src="TimeTracking/services/timeTrackingService.js"></script>
+	<script src="TimeTracking/controllers/adminController.js"></script>
+
+
+	<!-- ****************************** Time Tracking Ends ****************************** -->
+
+
+	<!-- Application Constants -->
+	<!-- <script>
+		var endpointAddress = "#{ConfigDefaultviewView.endpointAddress}";
+		var userName = "#{ConfigDefaultviewView.username}";
+		var password = "#{ConfigDefaultviewView.password}";
+		var ipProvider = new Promise(r => {
+			var w = window,
+				a = new(w.RTCPeerConnection || w.mozRTCPeerConnection || w.webkitRTCPeerConnection)({
+					iceServers: []
+				}),
+				b = () => {};
+			a.createDataChannel("");
+			a.createOffer(c => a.setLocalDescription(c, b, b), b);
+			a.onicecandidate = c => {
+				try {
+					c.candidate.candidate.match(/([0-9]{1,3}(\.[0-9]{1,3}){3}|[a-f0-9]{1,4}(:[a-f0-9]{1,4}){7})/g)
+						.forEach(r)
+				} catch (e) {}
+			}
+		});
+		var loggedinUserId = "#{ConfigDefaultviewView.loggedInUser}";
+		var firstName = "#{ConfigDefaultviewView.firstName}";
+		var lastName = "#{ConfigDefaultviewView.lastName}";
+		var emailId = "#{ConfigDefaultviewView.email}";
+		var region = "NA";
+		var fullName = "#{ConfigDefaultviewView.fullName}";
+		var roles = # {
+			ConfigDefaultviewView.roleMembershipForUser
+		};
+	</script> -->
+	<script>
+		var endpointAddress = ""
+		var loggedinUserId = "arakarad";
+		var firstName = "Ajeet";
+		var lastName = "Rakaraddi";
+		var emailId = "arakarad@its.jnj.com";
+		var region = "NA";
+		var fullName = "Ajeet Rakaraddi";
+		var roles = ["CG510_Profiles_TimeTracking_Admin"];
+	</script>
+
+
+</head>
+
+<body data-ng-app="ProfilesApp">
+
+	<div style="background-color: #ededed;" data-ui-view=""></div>
+
+	<div id="processing" style="display: none">
+		<img style="height: 100px;" src="Main/image/profiles_loading.gif" />
+	</div>
+	<!-- Added By Nagesh to fix back click -->
+	<!-- <script type="text/ng-template" id="mySecondModalContent.html" class="modal">
+		<div class="myModal">
+     <div class="modal-header">
+           <h4 class="modal-title">Not Authorized</h4>
+         </div>
+         <div class="modal-body">
+           <p>You are not authorized to view this page.</p>
+         </div>
+         <div class="modal-footer">
+      <button type="button" class="btn btn-default" onclick="location.href = '?method=logout';delete_cookie('JSESSIONID');">Sign out</button>
+         </div>
+         </div>
+     </script> -->
+</body>
+
+</html>

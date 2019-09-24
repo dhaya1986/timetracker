@@ -1,0 +1,47 @@
+<!-- 
+ * ========================================================================
+ * Added by Reeth with ref to Modularize view of Breadcrumb Section  29-03-2017   
+ * ========================================================================
+ * -->
+<div data-ng-controller="breadcrumbController" data-ng-init="init()">
+	<script type="text/ng-template" id="request.xhtml">
+		<div data-ng-include="'/CommonBD/html/requestTemplate.xhtml'"></div>
+  </script>
+	<div class="row breadcumBorder" style="height: 50px; margin-left: 0%;display: inline-flex;width: 100%;">
+		<div style="width: 35%;">
+			<ui-breadcrumbs displayname-property="data.displayName" abstract-proxy-property="data.proxy">
+			</ui-breadcrumbs>
+		</div>
+		<!-- Below HTML structure modified by Shashank Honrao on 22-Nov-20147 -->
+		<div class="breadcrumb-link-margin" style="width: 64%;" data-ng-if="showAddProfilesSection">
+			<div class="row mr-0 pull-right">
+				<div class="breadcrumb-links" style="margin-right: 10px;">
+					<div>
+						<a href="">{{linksection.name}}<span class="caret"></span></a>
+					</div>
+				</div>
+				<div class="breadcrumb-links" data-ng-show="adminRole">
+					<div class="dropdown">
+						<button class="dropdown-toggle newButton" type="button" data-toggle="dropdown">
+							<img src="{{buttonsection.image}}"></img> <a href="#">{{
+								buttonsection.name }}</a> <span class="caret"></span>
+						</button>
+						<div class="dropdown-menu dropdown-menu-right add-profile-dropdown-menu jj_font_13" role="menu">
+							<form class="form-horizontal" role="form">
+								<div class="form-group ml-0 mr-0">
+									<label for="addEmail">Email *</label>
+									<textarea data-ng-model="addEmail" data-ng-value="addEmail" id="addEmail"
+										class="form-control" type="textarea" rows="2"></textarea>
+								</div>
+							</form>
+							<p>Multiple Email id(s) should be separated by a comma.</p>
+							<button type="submit" class="btn btn-primary dropdown jj_font_13" data-toggle="dropdown"
+								data-ng-click="addProfile(addEmail)">Add
+								Profiles</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

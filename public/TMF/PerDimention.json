@@ -1,0 +1,601 @@
+{
+    "perDimension": {
+        "columnDef": {
+            "profilesDepartment": {
+                "field": "departmentDescription",
+                "order": "4",
+                "width": "230",
+                "cellRenderer": null,
+                "headerName": "Department"
+            },
+            "profilesName": {
+                "field": "firstName",
+                "order": "2",
+                "width": "230",
+                "cellRenderer": "addFamilyName",
+                "headerName": "Name"
+            },
+            "profilesRegion": {
+                "field": "region",
+                "order": "5",
+                "width": "230",
+                "cellRenderer": null,
+                "headerName": "Region"
+            },
+            "profilesContact": {
+                "field": "businessTelephone",
+                "order": "6",
+                "width": "230",
+                "cellRenderer": null,
+                "headerName": "Contact #"
+            },
+            "profilesCompanyName": {
+                "field": "companyName",
+                "order": "3",
+                "width": "230",
+                "cellRenderer": null,
+                "headerName": "Company Name"
+            },
+            "wwid": {
+                "field": "wwid",
+                "order": "1",
+                "width": "230",
+                "cellRenderer": "utilityRenderFun",
+                "headerName": "WWID"
+            }
+        },
+        "RnDLinkPagination": {
+            "rndLinkPagination": {
+                "startIndex": "0",
+                "paginationEntityType": null,
+                "endIndex": "2000",
+                "pagination": "true"
+            }
+        },
+        "TTEnableEdit": {
+            "TTEnableEdit": {
+                "month": "Jan"
+            }
+        },
+        "scheduler": {
+            "dateTime": {
+                "startTime": "12:15:02",
+                "startDate": "2018/01/11",
+                "minutes": "0",
+                "Run As User": "CG510_Profiles_ScheduledUser",
+                "hours": "16",
+                "description": "Inserting new Profiles into cache based on EmailID",
+                "target": "$any",
+                "service": "CG510_Profiles_ServiceImplementation.terracottaServices:jjedsPullProfiles"
+            }
+        },
+        "about": {
+            "UILabels": {
+                "MWS_LABEL": "MWS",
+                "VERSION_INFORMATION": "1.0",
+                "ADVANCE_TECHNICAL_DETAILS": "ADVANCE TECHNICAL DETAILS",
+                "RELEASE_VERSION": "1.0",
+                "IS_LABEL": "IS",
+                "VERSION_DATA ": "1.0",
+                "PROJECTS_STARTING_STRING": "CG510_Profiles"
+            },
+            "MWS_Versions": {
+                "CG510_Profiles_Lib": "1.0",
+                "CG510_Profiles_Skills": "1.0",
+                "CG510_Profiles_CommonBD": "1.0",
+                "CG510_Profiles_ListView": "1.0",
+                "CG510_Profile_LoginScreen": "1.0",
+                "CG510_Profiles_Search": "1.0",
+                "CG510_Profiles_DetailsHeader": "1.0",
+                "CG510_Profiles_Source": "1.0",
+                "CG510_Profiles_CreateRequest": "1.0",
+                "CG510_Profiles_CommonFilter": "1.0",
+                "CG510_Profiles_Notification": "1.0",
+                "CG510_Profiles_CommonTMF": "1.0",
+                "CG510_Profiles_Tile": "1.0",
+                "CG510_Profiles_Common_Modal": "1.0",
+                "CG510_Profiles_Header": "1.0"
+            }
+        },
+        "TTEmailNotification": {
+            "smtpDetails": {
+                "mailhostport": "25",
+                "from": "dev-tox@jaitra.com",
+                "user": "dev-tox@jaitra.com",
+                "mailhost": "smtp.eu.jnj.com"
+            },
+            "sendEmail": {
+                "body": "<h3>Dear User,</h3> <p>Your time tracking table contains empty time for this month, please add your time. <br>As on %timestamp% the following projects have no time entered on them,</br><br>%projectsList%.</br><br><a href=\"chromerun://http://itsbebelsp02175.jnj.com:8500/Profiles\" style=\"background-color:#008cba;border-radius:4px;border:none;color:#fff;padding:8px 15px;text-align:center;display:inline-block;font-size:14px;margin:4px 2px;cursor:pointer;text-decoration: none;\">Go to Application</a></div></br><br><br>This is a system-generated email; please do not reply.</br> <br>Sincerely,</br> Time Tracking team</br></p>",
+                "subject": "Time Tracking– Missing time",
+                "projectURL": "chromerun://http://itsbebelsp02175.jnj.com:8500/Profiles"
+            },
+            "Schedular_Detail": {
+                "startTime": "00:00:00",
+                "startDate": "2018/12/10",
+                "months": null,
+                "minutes": "0",
+                "days": "28",
+                "Run As User": "CG510_Profiles_TimeTracking_ScheduledUser",
+                "hours": "18",
+                "description": "This scheduler is schedule to send the email",
+                "target": "$any",
+                "service": "CG510_Profiles_TimeTrackingEmail.services:sendEmailNotification"
+            }
+        },
+        "newRelic": {
+            "browserStatistics": {
+                "euroMapID": "ReSDhCsDqvUoU-YZwnWN0NemukoFunOI",
+                "geoChartID": "lSEGbLjOnwq",
+                "pageViewsChartHeading": "No. of Page Views per Country",
+                "pageViewsID": "0ZFXkEbON8ejSPpzHbcxjEw5iVP_4Pdh",
+                "euroMapHeading": "Please Scroll Down For Application Response In Europe"
+            }
+        },
+        "modeSection": {
+            "tileMode": {
+                "order": "1",
+                "name": "Tile",
+                "link": "main.tileview"
+            },
+            "listMode": {
+                "order": "2",
+                "name": "List",
+                "link": "main.listview"
+            }
+        },
+        "header": {
+            "appName": {
+                "name": "Profiles",
+                "action": "main"
+            },
+            "help": {
+                "name": "Help",
+                "action": "https://myapps.psso.its.jnj.com/ppolicy/legal.jsp"
+            },
+            "userPreference": {
+                "name": "Preference",
+                "action": "main.preference"
+            },
+            "support": {
+                "name": "Support",
+                "action": null
+            },
+            "logout": {
+                "name": "Sign out",
+                "action": "/?method=logout&returnUrl=Profiles"
+            }
+        },
+        "TTHomePageColDef": {
+            "projectStatus": {
+                "field": "projectStatus",
+                "minWidth": "200",
+                "width": "200",
+                "colId": "3",
+                "headerName": "Project Status"
+            },
+            "projectLeader": {
+                "field": "projectLeader.fullName",
+                "minWidth": "200",
+                "width": "200",
+                "colId": "6",
+                "headerName": "Project Leader"
+            },
+            "checkBox": {
+                "field": "trackTime",
+                "minWidth": "100",
+                "width": "100",
+                "colId": "7",
+                "cellRenderer": "trackTimeCheckBox",
+                "headerName": "Track Time"
+            },
+            "description": {
+                "field": "description",
+                "minWidth": "200",
+                "width": "200",
+                "colId": "5",
+                "cellRenderer": "descriptionRender",
+                "headerName": "Description"
+            },
+            "projectTitle": {
+                "field": "projectName",
+                "minWidth": "200",
+                "width": "200",
+                "colId": "1",
+                "headerName": "Project Name"
+            },
+            "formulaStatus": {
+                "field": "formulaStatus",
+                "minWidth": "200",
+                "width": "200",
+                "colId": "4",
+                "headerName": "Formula Status"
+            },
+            "projectNumber": {
+                "field": "projectNumber",
+                "minWidth": "200",
+                "width": "200",
+                "colId": "2",
+                "headerName": "Project Number"
+            }
+        },
+        "TTAdminAllUserColDef": {
+            "may": {
+                "field": "months.may",
+                "minWidth": "50",
+                "width": "50",
+                "colId": "10",
+                "headerName": "May"
+            },
+            "apr": {
+                "field": "months.apr",
+                "minWidth": "50",
+                "width": "50",
+                "colId": "9",
+                "headerName": "Apr"
+            },
+            "linkNumber": {
+                "field": "linkNumber      ",
+                "minWidth": "100",
+                "width": "100",
+                "colId": "4",
+                "headerName": "Link Number"
+            },
+            "jul": {
+                "field": "months.jul",
+                "minWidth": "50",
+                "width": "50",
+                "colId": "12",
+                "headerName": "Jul"
+            },
+            "jun": {
+                "field": "months.jun",
+                "minWidth": "50",
+                "width": "50",
+                "colId": "11",
+                "headerName": "Jun"
+            },
+            "projectTitle": {
+                "field": "projectName",
+                "minWidth": "100",
+                "width": "100",
+                "colId": "3",
+                "headerName": "Project Name"
+            },
+            "User Name": {
+                "field": "userName",
+                "minWidth": "100",
+                "width": "100",
+                "colId": "1",
+                "headerName": "User Name"
+            },
+            "wwid": {
+                "field": "WWID",
+                "minWidth": "100",
+                "width": "100",
+                "colId": "2",
+                "headerName": "WWID"
+            },
+            "oct": {
+                "field": "months.oct",
+                "minWidth": "50",
+                "width": "50",
+                "colId": "15",
+                "headerName": "Oct"
+            },
+            "dec": {
+                "field": "months.dec",
+                "minWidth": "50",
+                "width": "50",
+                "colId": "17",
+                "headerName": "Dec"
+            },
+            "feb": {
+                "field": "months.feb",
+                "minWidth": "50",
+                "width": "50",
+                "colId": "7",
+                "headerName": "Feb"
+            },
+            "nov": {
+                "field": "months.nov",
+                "minWidth": "50",
+                "width": "50",
+                "colId": "16",
+                "headerName": "Nov"
+            },
+            "sep": {
+                "field": "months.sep",
+                "minWidth": "50",
+                "width": "50",
+                "colId": "14",
+                "headerName": "Sep"
+            },
+            "jan": {
+                "field": "months.jan",
+                "minWidth": "50",
+                "width": "50",
+                "colId": "6",
+                "headerName": "Jan"
+            },
+            "mar": {
+                "field": "months.mar",
+                "minWidth": "50",
+                "width": "50",
+                "colId": "8",
+                "headerName": "Mar"
+            },
+            "aug": {
+                "field": "months.aug",
+                "minWidth": "50",
+                "width": "50",
+                "colId": "13",
+                "headerName": "Aug"
+            },
+            "devSite": {
+                "field": "devSite",
+                "minWidth": "100",
+                "width": "100",
+                "colId": "5",
+                "headerName": "Dev Site"
+            },
+            "totalTime": {
+                "field": "totalTime",
+                "minWidth": "75",
+                "width": "75",
+                "colId": "18",
+                "headerName": "Total Time"
+            }
+        },
+        "breadcrumbSection": {
+            "request": {
+                "profiles_extract_multiline": "Profile\nBulk"
+            }
+        },
+        "TTUserTrackTimeColDef": {
+            "may": {
+                "field": "months.may",
+                "minWidth": "90",
+                "cellEditor": "numericCellEditor",
+                "colId": "6",
+                "headerName": "May",
+                "editable": "false",
+                "cellStyle": "changeCellColor"
+            },
+            "apr": {
+                "field": "months.apr",
+                "minWidth": "90",
+                "cellEditor": "numericCellEditor",
+                "colId": "5",
+                "headerName": "Apr",
+                "editable": "false",
+                "cellStyle": "changeCellColor"
+            },
+            "removeProject": {
+                "minWidth": "65",
+                "colId": "0",
+                "cellRenderer": "removeProjectFromTrackTime",
+                "headerName": "Action",
+                "editable": "false"
+            },
+            "jul": {
+                "field": "months.jul",
+                "minWidth": "90",
+                "cellEditor": "numericCellEditor",
+                "colId": "8",
+                "headerName": "Jul",
+                "editable": "false",
+                "cellStyle": "changeCellColor"
+            },
+            "jun": {
+                "field": "months.jun",
+                "minWidth": "85",
+                "width": "100",
+                "cellEditor": "numericCellEditor",
+                "colId": "7",
+                "headerName": "Jun",
+                "editable": "false",
+                "cellStyle": "changeCellColor"
+            },
+            "projectTitle": {
+                "field": "projectName",
+                "minWidth": "200",
+                "colId": "1",
+                "headerName": "Project Name",
+                "editable": "false"
+            },
+            "dec": {
+                "field": "months.dec",
+                "minWidth": "90",
+                "cellEditor": "numericCellEditor",
+                "colId": "13",
+                "headerName": "Dec",
+                "editable": "false",
+                "cellStyle": "changeCellColor"
+            },
+            "oct": {
+                "field": "months.oct",
+                "minWidth": "90",
+                "cellEditor": "numericCellEditor",
+                "colId": "11",
+                "headerName": "Oct",
+                "editable": "false",
+                "cellStyle": "changeCellColor"
+            },
+            "feb": {
+                "field": "months.feb",
+                "minWidth": "90",
+                "cellEditor": "numericCellEditor",
+                "colId": "3",
+                "headerName": "Feb",
+                "editable": "false",
+                "cellStyle": "changeCellColor"
+            },
+            "nov": {
+                "field": "months.nov",
+                "minWidth": "90",
+                "cellEditor": "numericCellEditor",
+                "colId": "12",
+                "headerName": "Nov",
+                "editable": "false",
+                "cellStyle": "changeCellColor"
+            },
+            "sep": {
+                "field": "months.sep",
+                "minWidth": "90",
+                "cellEditor": "numericCellEditor",
+                "colId": "10",
+                "headerName": "Sep",
+                "editable": "false",
+                "cellStyle": "changeCellColor"
+            },
+            "jan": {
+                "field": "months.jan",
+                "minWidth": "90",
+                "cellEditor": "numericCellEditor",
+                "colId": "2",
+                "headerName": "Jan",
+                "editable": "false",
+                "cellStyle": "changeCellColor"
+            },
+            "mar": {
+                "field": "months.mar",
+                "minWidth": "90",
+                "cellEditor": "numericCellEditor",
+                "colId": "4",
+                "headerName": "Mar",
+                "editable": "false",
+                "cellStyle": "changeCellColor"
+            },
+            "aug": {
+                "field": "months.aug",
+                "minWidth": "90",
+                "cellEditor": "numericCellEditor",
+                "colId": "9",
+                "headerName": "Aug",
+                "editable": "false",
+                "cellStyle": "changeCellColor"
+            }
+        },
+        "filterSection": {
+            "Region": {
+                "order": "3",
+                "name": "region",
+                "list_multiline": "ASPAC\nEMEA\nLATAM\nNA",
+                "image": "region-icon",
+                "hasSubMenu": "false"
+            },
+            "companyName": {
+                "name": "companyName",
+                "list_multiline": "Consumer\nEnterprise\nExternal Partner\nMedical Devices\nPharmaceuticals",
+                "image": "company-icon",
+                "order\t": "1",
+                "hasSubMenu": "false"
+            },
+            "Department": {
+                "name": "department",
+                "list_multiline": "SPEC CORRECTION  \r\nDirección Técnica\r\nR & D\r\nTH R&D\r\nTA\r\nSMP\r\nProd Development-Adm\r\nTA - PROJETO S\r\nLA SAP OPERATIONS\r\nRC0037_OTHER\r\nSMP OTC UK\r\nTECHNICAL ASSURANCE\r\nVDR External\r\nProcess Dev & Scient\r\nRaw Material Centre\r\nTech Assurance\r\nRC0382_EMP_\r\nSMPSANPRO\r\nRMC Resources\r\nQTA\r\nTECHNICAL ASSUREMENT\r\nRAW MATERIAL CENTER\r\nBEAUTY\r\nSMP OTC\r\nSMP/TA F\r\nProjeto Quantum Leap\r\nSMP TOILETRIES\r\nSMP Products\r\nOral (RD_PACK)\r\nSupplier/EM Quality\r\nR&D OpsNTG\r\nWW Engineering\r\nPOWER TO GROW\r\nQA -Administration\r\nTECHINCAL ASSURANCE\r\nEqpmt Engn\r\nSMP Venezuela\r\nPharm Tech (TA)\r\nJJ SA\r\nR&D  JJCE CH\r\nQTA-TA\r\nLAP SMP\r\nQA\r\nVDR Beauty\r\nR&D OPS ADMIN\r\nTATT\r\nRC0261_EMP\r\nRegional TA (MRC 447\r\nSTEALTH\r\nSMP Regional\r\nVDR Young Graduates\r\nVP Procurement",
+                "image": "department-icon",
+                "order\t": "2",
+                "hasSubMenu": "false"
+            }
+        },
+        "externalSystem": {
+            "getAllProjectName": {
+                "username": "CG510_RnDLink_External_User",
+                "password": "Welcome@123",
+                "endPointAddress": "http://itsbebelsp00695.jnj.com:5500/rest/CG510_RnDLink_Gateway_v1/restServices/getAllProjectName"
+            },
+            "searchProjects": {
+                "username": "CG510_RnDLink_External_User",
+                "password": "Welcome@123",
+                "endPointAddress": "http://itsbebelsp00695.jnj.com:5500/rest/CG510_RnDLink_Gateway_v1/restServices/searchProjects"
+            },
+            "getProjectWithID": {
+                "username": "CG510_RnDLink_External_User",
+                "password": "Welcome@123",
+                "endPointAddress": "http://itsbebelsp00695.jnj.com:5500/rest/CG510_RnDLink_Gateway_v1/restServices/getProjectWithID"
+            }
+        },
+        "adminAllProjectsColDef": {
+            "projectLeader": {
+                "field": "projectLeader.fullName",
+                "minWidth": "200",
+                "width": "200",
+                "colId": "3",
+                "headerName": "Project Leader"
+            },
+            "technology": {
+                "field": "technology",
+                "minWidth": "150",
+                "width": "200",
+                "colId": "6",
+                "headerName": "Technology"
+            },
+            "linkNumber": {
+                "field": "linkNumber",
+                "minWidth": "150",
+                "width": "200",
+                "colId": "2",
+                "headerName": "Link Number"
+            },
+            "check": {
+                "field": "adminApprove",
+                "minWidth": "75",
+                "width": "50",
+                "colId": "8",
+                "cellRenderer": "adminApprove",
+                "headerName": "Eligible?"
+            },
+            "description": {
+                "field": "description",
+                "minWidth": "200",
+                "width": "200",
+                "colId": "4",
+                "cellRenderer": "descriptionRender",
+                "headerName": "Description"
+            },
+            "projectTitle": {
+                "field": "projectName",
+                "minWidth": "150",
+                "width": "175",
+                "colId": "1",
+                "headerName": "Project Name"
+            },
+            "devSite": {
+                "field": "devSite",
+                "minWidth": "150",
+                "width": "200",
+                "colId": "5",
+                "headerName": "Dev Site"
+            },
+            "projectNumber": {
+                "field": "projectNumber",
+                "minWidth": "175",
+                "width": "200",
+                "colId": "0",
+                "headerName": "Project Number"
+            },
+            "totalTime": {
+                "field": "projectTotal",
+                "minWidth": "75",
+                "width": "100",
+                "colId": "7",
+                "headerName": "FTE"
+            }
+        },
+        "TTProjectsCarryForward": {
+            "scheduler_Details": {
+                "startTime": "00:00:00",
+                "startDate": "2018/12/14",
+                "months": "1",
+                "minutes": "0",
+                "days": "1",
+                "Run As User": "CG510_Profiles_TimeTracking_ScheduledUser",
+                "hours": "0",
+                "description": "This scheduler gets projects from previous year and saves for current year",
+                "target": "$any",
+                "service": "CG510_Profiles_TimeTracking.services:projectsCarryForward"
+            }
+        }
+    }
+}

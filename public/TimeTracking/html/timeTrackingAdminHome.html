@@ -1,0 +1,45 @@
+<div class="bgGray" data-ng-controller="adminController">
+	<div>
+		<!-- Tab Section -->
+		<div style="background-color: #fff; padding-bottom: 10px; border-bottom: 1px solid #ddd;">
+			<div style="background-color: #fafafa">
+				<ul class="nav nav-tabs adminTabs" style="padding-left: 20px">
+					<li data-ng-click="setTab('1')" data-ng-class="{active:view=='1'}">
+						<a class="Overview" style="cursor: pointer;">All Projects</a>
+					</li>
+					<li data-ng-click="setTab('2')" data-ng-class="{active:view=='2'}">
+						<a class="Overview" style="cursor: pointer;">All Users</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<!-- Load All Projects/ All Users Page -->
+	<div data-ng-if="view=='1'" data-ng-include="'TimeTracking/html/adminAllProjects.html'"></div>
+	<div data-ng-if="view=='2'" data-ng-include="'TimeTracking/html/adminAllUsers.html'"></div>
+
+	<!-- CONFIRMATION MODAL HTML -->
+	<div id="confirmationModal" class="modal fade" role="dialog" data-keyboard="false" data-backdrop="static">
+		<div class="modal-dialog">
+
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header" style="border: none">
+					<h4 class="modal-title" style="font-weight: bold">{{modalObject.modalHeader}}</h4>
+				</div>
+				<div class="modal-body">
+					<p ng-bind-html="modalObject.modalMessage"></p>
+				</div>
+				<div class="modal-footer" style="margin: 0px;border: none">
+					<button type="button" class="btn btn-primary" data-dismiss="modal"
+						data-ng-click="calladminApproveProjectRest(modalObject.actionBtn)">{{modalObject.actionBtn}}</button>
+					<button type="button" data-ng-if="modalObject.status == '2'"
+						data-ng-click="calladminApproveProjectRest(modalObject.cancelBtn)" class="btn btn-default"
+						data-dismiss="modal">{{modalObject.cancelBtn}}</button>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>

@@ -1,0 +1,77 @@
+<div class="bgGray" data-ng-controller="timeTrackingHomePageController">
+	<div data-ng-if="showUserPage == 'UserHomePage' &amp;&amp; !showTTHomeIcon">
+		<div class="panel-body" style="padding-bottom: 0px">
+			<div class="row">
+				<div class="col-sm-8 col-md-8 col-lg-8 My-Active-Projects">
+					<span class="jj_font_21">All Projects ({{totalCount}})</span>
+				</div>
+				<div class="col-sm-4 col-md-4 col-lg-4 My-Active-Projects">
+					<div class="dropdown jj_font_13" style="float: right;top:5px">
+						<span data-toggle="dropdown" style="cursor: pointer;"> Edit Column <span class="caret"></span>
+						</span>
+						<div class="dropdown-menu dropdown-menu-transition edit-column-align dropdown-menu-right editColumnAllignment"
+							data-ng-click="$event.stopPropagation()">
+							<span class="edit-column-label2"> Select Columns To Show </span>
+							<ul style="list-style: none;" id="filterText">
+								<li data-ng-repeat="colHeads in allTitles">
+									<input type="checkbox" value="{{colHeads.field}}" id="cks"
+										data-ng-model="selectedAll"
+										data-ng-click="hideColumn(selectedAll)">{{colHeads.headerName}}</input>
+								</li>
+							</ul>
+							<span class="ml-25">
+								<button class="btn ButtonPrimary" data-ng-click="resetFilter()">Reset</button>
+							</span>
+						</div>
+					</div>
+					<div style="display: inline-flex; float: right; width: fit-content;" class="dropdown jj_font_13">
+						<button class="jj-secondary-button" style="margin: 0px 10px; height: 34px;"
+							data-ng-click="changeView('UserViewPage')">Track
+							Time</button>
+						<button class="jj-secondary-button" style="margin: 0px 10px; height: 34px;"
+							data-ng-click="refreshProjectsList()">Refresh</button>
+					</div>
+				</div>
+			</div>
+			<div class="panel-default">
+				<div class="panel-body">
+					<div id="TTHomeGrid" data-ag-grid="TTHomePageGridOptions"
+						style="width: 100%; padding-bottom: 0px; height: 460px;" class="ag-fresh list-align"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- INCLUDING USERVIEWPAGE HTML -->
+	<div data-ng-if="showUserPage == 'UserViewPage' &amp;&amp; showTTHomeIcon"
+		data-ng-include="'TimeTracking/html/userViewPage.html'"></div>
+
+	<!-- INCLUDING USEREDITPAGE HTML -->
+	<div data-ng-if="showUserPage == 'UserEditPage' &amp;&amp; showTTHomeIcon"
+		data-ng-include="'TimeTracking/html/userEditPage.html'"></div>
+
+	<!-- CONFIRMATION MODAL HTML -->
+	<div id="confirmationModal" class="modal fade" role="dialog" data-keyboard="false" data-backdrop="static">
+		<div class="modal-dialog">
+
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header" style="border: none">
+					<h4 class="modal-title" style="font-weight: bold">{{modalObject.modalHeader}}</h4>
+				</div>
+				<div class="modal-body">
+					<p ng-bind-html="modalObject.modalMessage"></p>
+				</div>
+				<div class="modal-footer" style="margin: 0px;border: none">
+					<button type="button" class="btn btn-primary" data-dismiss="modal"
+						data-ng-click="callAddRemoveProjectToTrackTimeRest(modalObject.actionBtn)">{{modalObject.actionBtn}}</button>
+					<button type="button" data-ng-if="modalObject.status == '2'"
+						data-ng-click="callAddRemoveProjectToTrackTimeRest(modalObject.cancelBtn)"
+						class="btn btn-default" data-dismiss="modal">{{modalObject.cancelBtn}}</button>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+</div>
