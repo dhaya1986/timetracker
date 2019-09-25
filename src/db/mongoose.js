@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const mongoose_url  = "mongodb://mongo:27017/time-tracking-db"
+const mongoose_url  = process.env.MONGO_URL || "mongodb://mongo:27017/time-tracking-db";
 mongoose.connect(mongoose_url, {
     useNewUrlParser: true,
     useCreateIndex: true,
